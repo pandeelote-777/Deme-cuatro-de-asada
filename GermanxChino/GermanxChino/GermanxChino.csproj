@@ -51,6 +51,10 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Postres%28Pasteleria%29.cs" />
+    <Compile Include="Postres%28Pasteleria%29.Designer.cs">
+      <DependentUpon>Postres(Pasteleria).cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

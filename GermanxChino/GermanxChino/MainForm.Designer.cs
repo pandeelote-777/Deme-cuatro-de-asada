@@ -51,7 +51,7 @@ namespace GermanxChino
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(285, 7);
+			this.label1.Location = new System.Drawing.Point(272, 7);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(160, 37);
 			this.label1.TabIndex = 0;
@@ -60,7 +60,7 @@ namespace GermanxChino
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(245, 54);
+			this.label2.Location = new System.Drawing.Point(245, 56);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(66, 23);
 			this.label2.TabIndex = 1;
@@ -70,12 +70,12 @@ namespace GermanxChino
 			// 
 			this.txtUsiario.Location = new System.Drawing.Point(330, 54);
 			this.txtUsiario.Name = "txtUsiario";
-			this.txtUsiario.Size = new System.Drawing.Size(151, 26);
+			this.txtUsiario.Size = new System.Drawing.Size(151, 22);
 			this.txtUsiario.TabIndex = 2;
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(245, 81);
+			this.label3.Location = new System.Drawing.Point(245, 84);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(82, 23);
 			this.label3.TabIndex = 3;
@@ -85,8 +85,9 @@ namespace GermanxChino
 			// 
 			this.txtContraseña.Location = new System.Drawing.Point(330, 83);
 			this.txtContraseña.Name = "txtContraseña";
-			this.txtContraseña.Size = new System.Drawing.Size(151, 26);
+			this.txtContraseña.Size = new System.Drawing.Size(151, 22);
 			this.txtContraseña.TabIndex = 4;
+			this.txtContraseña.UseSystemPasswordChar = true;
 			// 
 			// btnEntrar
 			// 
@@ -124,10 +125,10 @@ namespace GermanxChino
 			// 
 			// MainForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Cyan;
-			this.ClientSize = new System.Drawing.Size(549, 198);
+			this.ClientSize = new System.Drawing.Size(518, 198);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.btnSalir);
 			this.Controls.Add(this.btnEntrar);
