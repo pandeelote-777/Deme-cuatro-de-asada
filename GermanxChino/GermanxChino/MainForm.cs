@@ -29,5 +29,17 @@ namespace GermanxChino
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		
+		void BtnSalirClick(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+		
+		void BtnEntrarClick(object sender, EventArgs e)
+		{
+			if(txtUsiario.Text=="" && txtContraseña.Text==""){
+				
+			}
+		}
 	}
 }
