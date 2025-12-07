@@ -36,12 +36,16 @@ namespace GermanxChino
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.SuspendLayout();
 			// 
 			// Empleados
 			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Text = "Empleados";
+			this.ClientSize = new System.Drawing.Size(610, 510);
 			this.Name = "Empleados";
+			this.Text = "Empleados";
+			this.ResumeLayout(false);
 		}
 	}
 }
