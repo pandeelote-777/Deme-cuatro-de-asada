@@ -28,5 +28,22 @@ namespace GermanxChino
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		
+		void BtnQuitarClick(object sender, EventArgs e)
+		{
+			pictureBox1.Image=null;
+		}
+		
+		void BtnActualizarClick(object sender, EventArgs e)
+		{
+			OpenFileDialog imagen = new OpenFileDialog();
+			imagen.Filter="Archivos de imagen |*.jpg; *.jpeg; *.png; *.gif; *.bmp";
+			
+			if(imagen.ShowDialog() == DialogResult.OK){
+				string ima = imagen.FileName;
+				pictureBox1.Image= Image.FromFile(ima);
+			}
+	
+		}
 	}
 }

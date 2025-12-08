@@ -29,6 +29,7 @@ namespace GermanxChino
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		int c=0,f=0;
 		
 		void BtnSalirClick(object sender, EventArgs e)
 		{
@@ -41,6 +42,17 @@ namespace GermanxChino
 				Menu f =new Menu();
 				f.Show();
 				this.Hide();
+			}
+			else{
+				if(c<=2){
+				c=c+1;
+				f=4-c;
+				MessageBox.Show("El usiario o la contraseña estan mal. "+"Tienes "+f.ToString()+" oportunidades");
+				}else{
+					if(c==3){
+						Application.Exit();
+					}
+				}
 			}
 		}
 	}

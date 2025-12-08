@@ -52,7 +52,7 @@ namespace GermanxChino
 									this.tolSalir});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Size = new System.Drawing.Size(763, 27);
+			this.toolStrip1.Size = new System.Drawing.Size(763, 25);
 			this.toolStrip1.TabIndex = 2;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
@@ -62,7 +62,7 @@ namespace GermanxChino
 			this.tolPasteleria.Image = ((System.Drawing.Image)(resources.GetObject("tolPasteleria.Image")));
 			this.tolPasteleria.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tolPasteleria.Name = "tolPasteleria";
-			this.tolPasteleria.Size = new System.Drawing.Size(92, 24);
+			this.tolPasteleria.Size = new System.Drawing.Size(77, 22);
 			this.tolPasteleria.Text = "Pasteleria";
 			this.tolPasteleria.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.tolPasteleria.Click += new System.EventHandler(this.TolPasteleriaClick);
@@ -72,7 +72,7 @@ namespace GermanxChino
 			this.tolEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("tolEmpleados.Image")));
 			this.tolEmpleados.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tolEmpleados.Name = "tolEmpleados";
-			this.tolEmpleados.Size = new System.Drawing.Size(103, 24);
+			this.tolEmpleados.Size = new System.Drawing.Size(85, 22);
 			this.tolEmpleados.Text = "Empleados";
 			this.tolEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.tolEmpleados.Click += new System.EventHandler(this.TolEmpleadosClick);
@@ -82,14 +82,14 @@ namespace GermanxChino
 			this.tolSalir.Image = ((System.Drawing.Image)(resources.GetObject("tolSalir.Image")));
 			this.tolSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tolSalir.Name = "tolSalir";
-			this.tolSalir.Size = new System.Drawing.Size(58, 24);
+			this.tolSalir.Size = new System.Drawing.Size(49, 22);
 			this.tolSalir.Text = "Salir";
 			this.tolSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.tolSalir.Click += new System.EventHandler(this.TolSalirClick);
 			// 
 			// Menu
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Blue;
 			this.ClientSize = new System.Drawing.Size(763, 469);
