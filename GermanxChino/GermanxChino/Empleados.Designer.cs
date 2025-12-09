@@ -36,6 +36,7 @@ namespace GermanxChino
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
@@ -57,9 +58,11 @@ namespace GermanxChino
 			this.btnGuardar = new System.Windows.Forms.Button();
 			this.btnEliminar = new System.Windows.Forms.Button();
 			this.btnLimpiar = new System.Windows.Forms.Button();
+			this.erpHerror = new System.Windows.Forms.ErrorProvider(this.components);
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpHerror)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -221,6 +224,7 @@ namespace GermanxChino
 			this.btnGuardar.TabIndex = 18;
 			this.btnGuardar.Text = "Guardar";
 			this.btnGuardar.UseVisualStyleBackColor = true;
+			this.btnGuardar.Click += new System.EventHandler(this.BtnGuardarClick);
 			// 
 			// btnEliminar
 			// 
@@ -239,6 +243,10 @@ namespace GermanxChino
 			this.btnLimpiar.TabIndex = 20;
 			this.btnLimpiar.Text = "Limpiar";
 			this.btnLimpiar.UseVisualStyleBackColor = true;
+			// 
+			// erpHerror
+			// 
+			this.erpHerror.ContainerControl = this;
 			// 
 			// Empleados
 			// 
@@ -271,9 +279,11 @@ namespace GermanxChino
 			this.groupBox1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataLista)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpHerror)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ErrorProvider erpHerror;
 		private System.Windows.Forms.Button btnLimpiar;
 		private System.Windows.Forms.Button btnEliminar;
 		private System.Windows.Forms.Button btnGuardar;
