@@ -106,6 +106,7 @@ namespace GermanxChino
 			miLista.Add(Empleados);
 			dataLista.DataSource=null;
 			dataLista.DataSource=miLista;
+			BtnLimpiarClick();
 		}
 		
 		//Metodo para validar el Nombre
@@ -206,6 +207,18 @@ namespace GermanxChino
 				erpHerror.SetError(datiFechaNac,"");
 				return true;
 			}
+		}
+		
+		void BtnLimpiarClick(object sender, EventArgs e)
+		{
+			txtCodigoEmpleado.Clear();
+			txtNombreEmpleado.Clear();
+			cboPuesto.SelectedIndex=-1;
+			cboSex.SelectedIndex=-1;
+			rdbRegular.Checked=false;
+			rdbContrato.Checked=false;
+			pictureBox1.Image=null;
+			datiFechaNac.Value=DateTime.Now;
 		}
 	}
 }

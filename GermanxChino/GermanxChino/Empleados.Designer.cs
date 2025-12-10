@@ -237,6 +237,7 @@ namespace GermanxChino
 			this.btnLimpiar.TabIndex = 20;
 			this.btnLimpiar.Text = "Limpiar";
 			this.btnLimpiar.UseVisualStyleBackColor = true;
+			this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiarClick);
 			// 
 			// erpHerror
 			// 
