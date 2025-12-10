@@ -46,7 +46,6 @@ namespace GermanxChino
 			this.txtCodigoEmpleado = new System.Windows.Forms.TextBox();
 			this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
 			this.cboPuesto = new System.Windows.Forms.ComboBox();
-			this.txtFechaNac = new System.Windows.Forms.TextBox();
 			this.cboSex = new System.Windows.Forms.ComboBox();
 			this.rdbRegular = new System.Windows.Forms.RadioButton();
 			this.rdbContrato = new System.Windows.Forms.RadioButton();
@@ -59,6 +58,7 @@ namespace GermanxChino
 			this.btnEliminar = new System.Windows.Forms.Button();
 			this.btnLimpiar = new System.Windows.Forms.Button();
 			this.erpHerror = new System.Windows.Forms.ErrorProvider(this.components);
+			this.datiFechaNac = new System.Windows.Forms.DateTimePicker();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
@@ -135,13 +135,6 @@ namespace GermanxChino
 			this.cboPuesto.Size = new System.Drawing.Size(126, 24);
 			this.cboPuesto.TabIndex = 8;
 			// 
-			// txtFechaNac
-			// 
-			this.txtFechaNac.Location = new System.Drawing.Point(169, 94);
-			this.txtFechaNac.Name = "txtFechaNac";
-			this.txtFechaNac.Size = new System.Drawing.Size(126, 22);
-			this.txtFechaNac.TabIndex = 9;
-			// 
 			// cboSex
 			// 
 			this.cboSex.FormattingEnabled = true;
@@ -182,7 +175,7 @@ namespace GermanxChino
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(428, 13);
+			this.pictureBox1.Location = new System.Drawing.Point(504, 13);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(131, 131);
 			this.pictureBox1.TabIndex = 14;
@@ -190,7 +183,7 @@ namespace GermanxChino
 			// 
 			// btnActualizar
 			// 
-			this.btnActualizar.Location = new System.Drawing.Point(401, 158);
+			this.btnActualizar.Location = new System.Drawing.Point(477, 158);
 			this.btnActualizar.Name = "btnActualizar";
 			this.btnActualizar.Size = new System.Drawing.Size(75, 23);
 			this.btnActualizar.TabIndex = 15;
@@ -200,7 +193,8 @@ namespace GermanxChino
 			// 
 			// btnQuitar
 			// 
-			this.btnQuitar.Location = new System.Drawing.Point(513, 157);
+			this.btnQuitar.Enabled = false;
+			this.btnQuitar.Location = new System.Drawing.Point(589, 157);
 			this.btnQuitar.Name = "btnQuitar";
 			this.btnQuitar.Size = new System.Drawing.Size(75, 23);
 			this.btnQuitar.TabIndex = 16;
@@ -213,7 +207,7 @@ namespace GermanxChino
 			this.dataLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataLista.Location = new System.Drawing.Point(13, 205);
 			this.dataLista.Name = "dataLista";
-			this.dataLista.Size = new System.Drawing.Size(586, 150);
+			this.dataLista.Size = new System.Drawing.Size(707, 150);
 			this.dataLista.TabIndex = 17;
 			// 
 			// btnGuardar
@@ -248,11 +242,20 @@ namespace GermanxChino
 			// 
 			this.erpHerror.ContainerControl = this;
 			// 
+			// datiFechaNac
+			// 
+			this.datiFechaNac.Location = new System.Drawing.Point(169, 94);
+			this.datiFechaNac.Name = "datiFechaNac";
+			this.datiFechaNac.Size = new System.Drawing.Size(253, 22);
+			this.datiFechaNac.TabIndex = 21;
+			this.datiFechaNac.Value = new System.DateTime(2025, 12, 10, 13, 30, 48, 0);
+			// 
 			// Empleados
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(611, 409);
+			this.ClientSize = new System.Drawing.Size(732, 409);
+			this.Controls.Add(this.datiFechaNac);
 			this.Controls.Add(this.btnLimpiar);
 			this.Controls.Add(this.btnEliminar);
 			this.Controls.Add(this.btnGuardar);
@@ -262,7 +265,6 @@ namespace GermanxChino
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.cboSex);
-			this.Controls.Add(this.txtFechaNac);
 			this.Controls.Add(this.cboPuesto);
 			this.Controls.Add(this.txtNombreEmpleado);
 			this.Controls.Add(this.txtCodigoEmpleado);
@@ -283,6 +285,7 @@ namespace GermanxChino
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.DateTimePicker datiFechaNac;
 		private System.Windows.Forms.ErrorProvider erpHerror;
 		private System.Windows.Forms.Button btnLimpiar;
 		private System.Windows.Forms.Button btnEliminar;
@@ -295,7 +298,6 @@ namespace GermanxChino
 		private System.Windows.Forms.RadioButton rdbContrato;
 		private System.Windows.Forms.RadioButton rdbRegular;
 		private System.Windows.Forms.ComboBox cboSex;
-		private System.Windows.Forms.TextBox txtFechaNac;
 		private System.Windows.Forms.ComboBox cboPuesto;
 		private System.Windows.Forms.TextBox txtNombreEmpleado;
 		private System.Windows.Forms.TextBox txtCodigoEmpleado;
