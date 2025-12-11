@@ -60,40 +60,40 @@ namespace GermanxChino
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(245, 56);
+			this.label2.Location = new System.Drawing.Point(254, 73);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(66, 23);
+			this.label2.Size = new System.Drawing.Size(106, 23);
 			this.label2.TabIndex = 1;
 			this.label2.Text = "Usuario:";
 			// 
 			// txtUsiario
 			// 
-			this.txtUsiario.Location = new System.Drawing.Point(330, 54);
+			this.txtUsiario.Location = new System.Drawing.Point(388, 66);
 			this.txtUsiario.Name = "txtUsiario";
-			this.txtUsiario.Size = new System.Drawing.Size(151, 22);
+			this.txtUsiario.Size = new System.Drawing.Size(151, 30);
 			this.txtUsiario.TabIndex = 2;
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(245, 84);
+			this.label3.Location = new System.Drawing.Point(254, 109);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(82, 23);
+			this.label3.Size = new System.Drawing.Size(128, 23);
 			this.label3.TabIndex = 3;
 			this.label3.Text = "Contraseña:";
 			// 
 			// txtContraseña
 			// 
-			this.txtContraseña.Location = new System.Drawing.Point(330, 83);
+			this.txtContraseña.Location = new System.Drawing.Point(388, 106);
 			this.txtContraseña.Name = "txtContraseña";
-			this.txtContraseña.Size = new System.Drawing.Size(151, 22);
+			this.txtContraseña.Size = new System.Drawing.Size(151, 30);
 			this.txtContraseña.TabIndex = 4;
 			this.txtContraseña.UseSystemPasswordChar = true;
 			// 
 			// btnEntrar
 			// 
-			this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
 			this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.btnEntrar.Location = new System.Drawing.Point(378, 122);
+			this.btnEntrar.Location = new System.Drawing.Point(401, 201);
 			this.btnEntrar.Name = "btnEntrar";
 			this.btnEntrar.Size = new System.Drawing.Size(103, 31);
 			this.btnEntrar.TabIndex = 5;
@@ -103,9 +103,9 @@ namespace GermanxChino
 			// 
 			// btnSalir
 			// 
-			this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
 			this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.btnSalir.Location = new System.Drawing.Point(245, 122);
+			this.btnSalir.Location = new System.Drawing.Point(272, 201);
 			this.btnSalir.Name = "btnSalir";
 			this.btnSalir.Size = new System.Drawing.Size(97, 31);
 			this.btnSalir.TabIndex = 6;
@@ -116,19 +116,19 @@ namespace GermanxChino
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(12, 7);
+			this.pictureBox1.Location = new System.Drawing.Point(12, 38);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(211, 179);
+			this.pictureBox1.Size = new System.Drawing.Size(227, 207);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 7;
 			this.pictureBox1.TabStop = false;
 			// 
 			// MainForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Cyan;
-			this.ClientSize = new System.Drawing.Size(518, 198);
+			this.BackColor = System.Drawing.Color.Thistle;
+			this.ClientSize = new System.Drawing.Size(629, 297);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.btnSalir);
 			this.Controls.Add(this.btnEntrar);
