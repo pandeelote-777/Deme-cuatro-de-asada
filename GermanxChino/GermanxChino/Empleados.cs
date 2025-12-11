@@ -106,7 +106,9 @@ namespace GermanxChino
 			miLista.Add(Empleados);
 			dataLista.DataSource=null;
 			dataLista.DataSource=miLista;
-			BtnLimpiarClick();
+			LimpiarControles();
+			
+			//Se gurda la base de datos
 		}
 		
 		//Metodo para validar el Nombre
@@ -150,18 +152,6 @@ namespace GermanxChino
 			}
 		}
 		
-		//Medodo para validar la fecha
-		private bool validarFecha()
-		{
-			if (string.IsNullOrEmpty(datiFechaNac.Text)) {
-				erpHerror.SetError(datiFechaNac,"Debes de ingresar una fecha de nacimiento");
-				return false;
-			}else{
-				erpHerror.SetError(datiFechaNac,"");
-				return true;
-			}
-		}
-		
 		//Metodo para validar el sexo
 		private bool validarSexo(){
 			if (string.IsNullOrEmpty(cboSex.Text)) {
@@ -196,20 +186,27 @@ namespace GermanxChino
 				return true;
 			}
 		}
-		//Metodo para validar la fecha
-		private bool validarFevha()
+		//Metodo para validar la fecha 
+		private bool validarFecha()
 		{
-			if (datiFechaNac.Value>DateTime.Now || datiFechaNac.Value==DateTime.Now)
+			if (datiFechaNac.Value>DateTime.Now)
 			{
 				erpHerror.SetError(datiFechaNac,"La fecha no puede ser futura o la de  hoy");
 				return false;
+				
 			}else{
-				erpHerror.SetError(datiFechaNac,"");
+				if (datiFechaNac.Value.Date==DateTime.Today) {
+					erpHerror.SetError(datiFechaNac,"La fecha no puede ser la de  hoy");
+					return false;
+				}else{
+					erpHerror.SetError(datiFechaNac,"");
 				return true;
+				}
+				
 			}
 		}
-		
-		void BtnLimpiarClick(object sender, EventArgs e)
+		//Limpiar controles
+		private void LimpiarControles()
 		{
 			txtCodigoEmpleado.Clear();
 			txtNombreEmpleado.Clear();
@@ -219,6 +216,10 @@ namespace GermanxChino
 			rdbContrato.Checked=false;
 			pictureBox1.Image=null;
 			datiFechaNac.Value=DateTime.Now;
+		}
+		void BtnLimpiarClick(object sender, EventArgs e)
+		{
+			LimpiarControles();
 		}
 	}
 }

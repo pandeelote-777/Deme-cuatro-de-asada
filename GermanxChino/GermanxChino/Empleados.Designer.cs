@@ -119,6 +119,7 @@ namespace GermanxChino
 			this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
 			this.txtCodigoEmpleado.Size = new System.Drawing.Size(126, 22);
 			this.txtCodigoEmpleado.TabIndex = 6;
+			this.txtCodigoEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// txtNombreEmpleado
 			// 
@@ -126,10 +127,17 @@ namespace GermanxChino
 			this.txtNombreEmpleado.Name = "txtNombreEmpleado";
 			this.txtNombreEmpleado.Size = new System.Drawing.Size(126, 22);
 			this.txtNombreEmpleado.TabIndex = 7;
+			this.txtNombreEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// cboPuesto
 			// 
 			this.cboPuesto.FormattingEnabled = true;
+			this.cboPuesto.Items.AddRange(new object[] {
+									"Operativo",
+									"Administradores",
+									"Surpevisor",
+									"Gerente",
+									"Conserge"});
 			this.cboPuesto.Location = new System.Drawing.Point(169, 65);
 			this.cboPuesto.Name = "cboPuesto";
 			this.cboPuesto.Size = new System.Drawing.Size(126, 24);
@@ -138,6 +146,9 @@ namespace GermanxChino
 			// cboSex
 			// 
 			this.cboSex.FormattingEnabled = true;
+			this.cboSex.Items.AddRange(new object[] {
+									"Masculino",
+									"Femenino"});
 			this.cboSex.Location = new System.Drawing.Point(169, 121);
 			this.cboSex.Name = "cboSex";
 			this.cboSex.Size = new System.Drawing.Size(126, 24);
@@ -167,6 +178,7 @@ namespace GermanxChino
 			// 
 			this.groupBox1.Controls.Add(this.rdbRegular);
 			this.groupBox1.Controls.Add(this.rdbContrato);
+			this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.groupBox1.Location = new System.Drawing.Point(119, 148);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(235, 40);
@@ -175,7 +187,8 @@ namespace GermanxChino
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(504, 13);
+			this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.pictureBox1.Location = new System.Drawing.Point(502, 13);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(131, 131);
 			this.pictureBox1.TabIndex = 14;
@@ -183,23 +196,27 @@ namespace GermanxChino
 			// 
 			// btnActualizar
 			// 
+			this.btnActualizar.BackColor = System.Drawing.Color.MistyRose;
+			this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnActualizar.Location = new System.Drawing.Point(477, 158);
 			this.btnActualizar.Name = "btnActualizar";
 			this.btnActualizar.Size = new System.Drawing.Size(75, 23);
 			this.btnActualizar.TabIndex = 15;
 			this.btnActualizar.Text = "Actualizar";
-			this.btnActualizar.UseVisualStyleBackColor = true;
+			this.btnActualizar.UseVisualStyleBackColor = false;
 			this.btnActualizar.Click += new System.EventHandler(this.BtnActualizarClick);
 			// 
 			// btnQuitar
 			// 
+			this.btnQuitar.BackColor = System.Drawing.Color.MistyRose;
 			this.btnQuitar.Enabled = false;
+			this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnQuitar.Location = new System.Drawing.Point(589, 157);
 			this.btnQuitar.Name = "btnQuitar";
 			this.btnQuitar.Size = new System.Drawing.Size(75, 23);
 			this.btnQuitar.TabIndex = 16;
 			this.btnQuitar.Text = "Quitar";
-			this.btnQuitar.UseVisualStyleBackColor = true;
+			this.btnQuitar.UseVisualStyleBackColor = false;
 			this.btnQuitar.Click += new System.EventHandler(this.BtnQuitarClick);
 			// 
 			// dataLista
@@ -212,31 +229,38 @@ namespace GermanxChino
 			// 
 			// btnGuardar
 			// 
-			this.btnGuardar.Location = new System.Drawing.Point(72, 361);
+			this.btnGuardar.BackColor = System.Drawing.Color.MistyRose;
+			this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnGuardar.Location = new System.Drawing.Point(12, 361);
 			this.btnGuardar.Name = "btnGuardar";
 			this.btnGuardar.Size = new System.Drawing.Size(83, 38);
 			this.btnGuardar.TabIndex = 18;
 			this.btnGuardar.Text = "Guardar";
-			this.btnGuardar.UseVisualStyleBackColor = true;
+			this.btnGuardar.UseVisualStyleBackColor = false;
 			this.btnGuardar.Click += new System.EventHandler(this.BtnGuardarClick);
 			// 
 			// btnEliminar
 			// 
-			this.btnEliminar.Location = new System.Drawing.Point(243, 361);
+			this.btnEliminar.BackColor = System.Drawing.Color.MistyRose;
+			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnEliminar.Location = new System.Drawing.Point(143, 361);
 			this.btnEliminar.Name = "btnEliminar";
 			this.btnEliminar.Size = new System.Drawing.Size(83, 38);
 			this.btnEliminar.TabIndex = 19;
 			this.btnEliminar.Text = "Eliminar";
-			this.btnEliminar.UseVisualStyleBackColor = true;
+			this.btnEliminar.UseVisualStyleBackColor = false;
 			// 
 			// btnLimpiar
 			// 
-			this.btnLimpiar.Location = new System.Drawing.Point(428, 361);
+			this.btnLimpiar.BackColor = System.Drawing.Color.MistyRose;
+			this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Arrow;
+			this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnLimpiar.Location = new System.Drawing.Point(637, 361);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(83, 38);
 			this.btnLimpiar.TabIndex = 20;
 			this.btnLimpiar.Text = "Limpiar";
-			this.btnLimpiar.UseVisualStyleBackColor = true;
+			this.btnLimpiar.UseVisualStyleBackColor = false;
 			this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiarClick);
 			// 
 			// erpHerror
@@ -255,6 +279,7 @@ namespace GermanxChino
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.RosyBrown;
 			this.ClientSize = new System.Drawing.Size(732, 409);
 			this.Controls.Add(this.datiFechaNac);
 			this.Controls.Add(this.btnLimpiar);
