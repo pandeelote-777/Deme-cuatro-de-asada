@@ -40,6 +40,7 @@ namespace GermanxChino
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.tolPasteleria = new System.Windows.Forms.ToolStripButton();
 			this.tolEmpleados = new System.Windows.Forms.ToolStripButton();
+			this.tolMas = new System.Windows.Forms.ToolStripButton();
 			this.tolSalir = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
@@ -49,10 +50,11 @@ namespace GermanxChino
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.tolPasteleria,
 									this.tolEmpleados,
+									this.tolMas,
 									this.tolSalir});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Size = new System.Drawing.Size(763, 25);
+			this.toolStrip1.Size = new System.Drawing.Size(1113, 27);
 			this.toolStrip1.TabIndex = 2;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
@@ -62,7 +64,7 @@ namespace GermanxChino
 			this.tolPasteleria.Image = ((System.Drawing.Image)(resources.GetObject("tolPasteleria.Image")));
 			this.tolPasteleria.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tolPasteleria.Name = "tolPasteleria";
-			this.tolPasteleria.Size = new System.Drawing.Size(77, 22);
+			this.tolPasteleria.Size = new System.Drawing.Size(92, 24);
 			this.tolPasteleria.Text = "Pasteleria";
 			this.tolPasteleria.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.tolPasteleria.Click += new System.EventHandler(this.TolPasteleriaClick);
@@ -72,27 +74,39 @@ namespace GermanxChino
 			this.tolEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("tolEmpleados.Image")));
 			this.tolEmpleados.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tolEmpleados.Name = "tolEmpleados";
-			this.tolEmpleados.Size = new System.Drawing.Size(85, 22);
+			this.tolEmpleados.Size = new System.Drawing.Size(103, 24);
 			this.tolEmpleados.Text = "Empleados";
 			this.tolEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.tolEmpleados.Click += new System.EventHandler(this.TolEmpleadosClick);
+			// 
+			// tolMas
+			// 
+			this.tolMas.Image = ((System.Drawing.Image)(resources.GetObject("tolMas.Image")));
+			this.tolMas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.tolMas.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.tolMas.Name = "tolMas";
+			this.tolMas.Size = new System.Drawing.Size(120, 24);
+			this.tolMas.Text = "Mas opciones";
+			this.tolMas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.tolMas.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+			this.tolMas.Click += new System.EventHandler(this.TolMasClick);
 			// 
 			// tolSalir
 			// 
 			this.tolSalir.Image = ((System.Drawing.Image)(resources.GetObject("tolSalir.Image")));
 			this.tolSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tolSalir.Name = "tolSalir";
-			this.tolSalir.Size = new System.Drawing.Size(49, 22);
+			this.tolSalir.Size = new System.Drawing.Size(58, 24);
 			this.tolSalir.Text = "Salir";
 			this.tolSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.tolSalir.Click += new System.EventHandler(this.TolSalirClick);
 			// 
 			// Menu
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Blue;
-			this.ClientSize = new System.Drawing.Size(763, 469);
+			this.ClientSize = new System.Drawing.Size(1113, 673);
 			this.Controls.Add(this.toolStrip1);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.IsMdiContainer = true;
@@ -104,6 +118,7 @@ namespace GermanxChino
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ToolStripButton tolMas;
 		private System.Windows.Forms.ToolStripButton tolSalir;
 		private System.Windows.Forms.ToolStripButton tolEmpleados;
 		private System.Windows.Forms.ToolStripButton tolPasteleria;
