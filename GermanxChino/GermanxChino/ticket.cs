@@ -29,6 +29,12 @@ namespace GermanxChino
 			//
 		}
 		
+		public string fgf
+		{
+			get { return txtSub.Text; }
+			set { txtSub.Text = value; }
+		}
+		
 		void TicketLoad(object sender, EventArgs e)
 		{
 			txtFe.Text=DateTime.Today.Date.ToString("d");

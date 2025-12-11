@@ -156,5 +156,13 @@ namespace GermanxChino
 			double cam = pag-imn;
 			txtCam.Text=cam.ToString();
 		}
+		
+		void BtnImClick(object sender, EventArgs e)
+		{
+			ticket f = new ticket();
+			ticket.fgf = txtSub.Text;
+			f.Show();
+			this.Hide();
+		}
 	}
 }
