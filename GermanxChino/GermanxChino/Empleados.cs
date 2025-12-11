@@ -7,6 +7,7 @@
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
 using System;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
@@ -35,6 +36,7 @@ namespace GermanxChino
 		{
 			pictureBox1.Image=null;
 			btnQuitar.Enabled=false;
+			btnActualizar.Enabled=true;
 		}
 		
 		void BtnActualizarClick(object sender, EventArgs e)
@@ -48,6 +50,7 @@ namespace GermanxChino
 				pictureBox1.Image= Image.FromFile(ima);
 				pictureBox1.SizeMode= PictureBoxSizeMode.Zoom;
 				btnQuitar.Enabled=true;
+				btnActualizar.Enabled=false;
 			}
 			
 		}
@@ -104,11 +107,10 @@ namespace GermanxChino
 			Empleados.Sexo=cboSex.Text;
 			Empleados.Estado=est;
 			miLista.Add(Empleados);
-			dataLista.DataSource=null;
-			dataLista.DataSource=miLista;
 			LimpiarControles();
 			
 			//Se gurda la base de datos
+			
 		}
 		
 		//Metodo para validar el Nombre
@@ -220,6 +222,58 @@ namespace GermanxChino
 		void BtnLimpiarClick(object sender, EventArgs e)
 		{
 			LimpiarControles();
+		}
+		
+		//Elimina una fila de datos escogido
+		void BtnEliminarClick(object sender, EventArgs e)
+		{
+			if(txtCodigoEmpleado.Text==""){
+				erpHerror.SetError(txtCodigoEmpleado,"Debes de poner el codigo del empleado");
+				LimpiarControles();
+				txtCodigoEmpleado.Focus();
+				return;
+			}else{
+				erpHerror.SetError(txtCodigoEmpleado,"");
+				DialogResult repuesta =MessageBox.Show("¿Estas seguro que quieres el registro?","Confirmación",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button2);
+				
+				if(repuesta==DialogResult.Yes){
+					foreach (lista Empleados in miLista) {
+						if(Empleados.Codigo_de_empleado==int.Parse(txtCodigoEmpleado.Text)){
+							miLista.Remove(Empleados);
+							break;
+						}
+					}
+					LimpiarControles();
+					dataLista.DataSource=null;
+					dataLista.DataSource=miLista;
+				}
+			}
+		}
+		//Conectar la base de datos
+		public bool AgregarEmpleado(int Codigo, string Nombre, string Puesto,string Fecha_de_nacimiento,string Sexo, string Estado){
+			//Crear la conexión
+			MySqlConnection cn = new MySqlConnection();
+			cn.ConnectionString="server=localhost; database=Proyecto_final; user=root; pwd=;";
+			cn.Open();
+			
+			//Se agrega el registro de base de datos
+			string strQl="insert into Empleados(Codigo, Nombre, Puesto, Fecha_de_nacimiento, Sexo, Estado)"+"values(@Codigo, @Nombre, @Puesto, @Fecha_de_nacimiento, @Sexo, @Estado)";
+			MySqlCommand comando = new MySqlCommand(strQl, cn);
+			comando.Parameters.AddWithValue("Codigo",Codigo);
+			comando.Parameters.AddWithValue("Nombre",Nombre);
+			comando.Parameters.AddWithValue("Puesto",Puesto);
+			comando.Parameters.AddWithValue("Fecha_de_nacimiento",Fecha_de_nacimiento);
+			comando.Parameters.AddWithValue("Sexo",Sexo);
+			comando.Parameters.AddWithValue("Estado",Estado);
+			comando.ExecuteNonQuery();
+			MessageBox.Show("Empleado agregado");
+			
+			//Finalizamos y cerramos todo
+			comando.Dispose();
+			cn.Close();
+			cn.Dispose();
+			
+			return true;
 		}
 	}
 }

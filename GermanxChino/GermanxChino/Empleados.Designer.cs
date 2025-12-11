@@ -134,7 +134,7 @@ namespace GermanxChino
 			this.cboPuesto.FormattingEnabled = true;
 			this.cboPuesto.Items.AddRange(new object[] {
 									"Operativo",
-									"Administradores",
+									"Administrador",
 									"Surpevisor",
 									"Gerente",
 									"Conserge"});
@@ -249,6 +249,7 @@ namespace GermanxChino
 			this.btnEliminar.TabIndex = 19;
 			this.btnEliminar.Text = "Eliminar";
 			this.btnEliminar.UseVisualStyleBackColor = false;
+			this.btnEliminar.Click += new System.EventHandler(this.BtnEliminarClick);
 			// 
 			// btnLimpiar
 			// 
