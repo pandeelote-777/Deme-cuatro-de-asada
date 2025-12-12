@@ -29,7 +29,6 @@ namespace GermanxChino
 			//
 		}
 		
-		
 		void TicketLoad(object sender, EventArgs e)
 		{
 			txtFe.Text=DateTime.Today.Date.ToString("d");
