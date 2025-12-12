@@ -107,6 +107,7 @@ namespace GermanxChino
 			Empleados.Sexo=cboSex.Text;
 			Empleados.Estado=est;
 			miLista.Add(Empleados);
+			//AgregarEmpleado();
 			LimpiarControles();
 			
 			//Se gurda la base de datos
