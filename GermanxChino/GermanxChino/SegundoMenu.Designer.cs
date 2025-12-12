@@ -45,7 +45,6 @@ namespace GermanxChino
 			this.button9 = new System.Windows.Forms.Button();
 			this.txt3 = new System.Windows.Forms.TextBox();
 			this.lbl3 = new System.Windows.Forms.Label();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.button8 = new System.Windows.Forms.Button();
 			this.button7 = new System.Windows.Forms.Button();
 			this.button6 = new System.Windows.Forms.Button();
@@ -84,19 +83,23 @@ namespace GermanxChino
 			this.esferaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cuboToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.piramideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.menuStrip1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// button14
 			// 
+			this.button14.BackColor = System.Drawing.Color.MediumPurple;
+			this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button14.Location = new System.Drawing.Point(199, 295);
 			this.button14.Margin = new System.Windows.Forms.Padding(4);
 			this.button14.Name = "button14";
-			this.button14.Size = new System.Drawing.Size(100, 28);
+			this.button14.Size = new System.Drawing.Size(128, 37);
 			this.button14.TabIndex = 46;
 			this.button14.Text = "Calcular";
-			this.button14.UseVisualStyleBackColor = true;
+			this.button14.UseVisualStyleBackColor = false;
 			this.button14.Visible = false;
 			this.button14.Click += new System.EventHandler(this.Button14Click);
 			// 
@@ -187,14 +190,6 @@ namespace GermanxChino
 			this.lbl3.Name = "lbl3";
 			this.lbl3.Size = new System.Drawing.Size(681, 66);
 			this.lbl3.TabIndex = 38;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Location = new System.Drawing.Point(447, 252);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(234, 188);
-			this.pictureBox1.TabIndex = 37;
-			this.pictureBox1.TabStop = false;
 			// 
 			// button8
 			// 
@@ -540,11 +535,21 @@ namespace GermanxChino
 			this.piramideToolStripMenuItem.Text = "Piramide";
 			this.piramideToolStripMenuItem.Click += new System.EventHandler(this.PiramideToolStripMenuItemClick);
 			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Location = new System.Drawing.Point(448, 235);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(236, 199);
+			this.pictureBox1.TabIndex = 47;
+			this.pictureBox1.TabStop = false;
+			// 
 			// SegundoMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.Thistle;
 			this.ClientSize = new System.Drawing.Size(755, 465);
+			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.button14);
 			this.Controls.Add(this.button13);
 			this.Controls.Add(this.button12);
@@ -554,7 +559,6 @@ namespace GermanxChino
 			this.Controls.Add(this.button9);
 			this.Controls.Add(this.txt3);
 			this.Controls.Add(this.lbl3);
-			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.button8);
 			this.Controls.Add(this.button7);
 			this.Controls.Add(this.button6);
@@ -570,9 +574,9 @@ namespace GermanxChino
 			this.Controls.Add(this.menuStrip1);
 			this.Name = "SegundoMenu";
 			this.Text = "SegundoMenu";
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
