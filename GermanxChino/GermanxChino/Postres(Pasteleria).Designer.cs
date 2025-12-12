@@ -41,7 +41,6 @@ namespace GermanxChino
 			this.rdbDul = new System.Windows.Forms.RadioButton();
 			this.rdbSal = new System.Windows.Forms.RadioButton();
 			this.label1 = new System.Windows.Forms.Label();
-			this.cmbSelec = new System.Windows.Forms.ComboBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
@@ -88,7 +87,7 @@ namespace GermanxChino
 			// 
 			// rdbDul
 			// 
-			this.rdbDul.Location = new System.Drawing.Point(32, 166);
+			this.rdbDul.Location = new System.Drawing.Point(32, 151);
 			this.rdbDul.Name = "rdbDul";
 			this.rdbDul.Size = new System.Drawing.Size(104, 24);
 			this.rdbDul.TabIndex = 1;
@@ -99,7 +98,7 @@ namespace GermanxChino
 			// 
 			// rdbSal
 			// 
-			this.rdbSal.Location = new System.Drawing.Point(155, 166);
+			this.rdbSal.Location = new System.Drawing.Point(155, 151);
 			this.rdbSal.Name = "rdbSal";
 			this.rdbSal.Size = new System.Drawing.Size(104, 24);
 			this.rdbSal.TabIndex = 2;
@@ -110,29 +109,15 @@ namespace GermanxChino
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(339, 162);
+			this.label1.Location = new System.Drawing.Point(330, 125);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(166, 23);
 			this.label1.TabIndex = 3;
 			this.label1.Text = "Seleccionar Producto:";
 			// 
-			// cmbSelec
-			// 
-			this.cmbSelec.FormattingEnabled = true;
-			this.cmbSelec.Items.AddRange(new object[] {
-									"Pay de queso",
-									"Pastel ",
-									"Helado",
-									"Crepas dulces",
-									"Brownie"});
-			this.cmbSelec.Location = new System.Drawing.Point(511, 159);
-			this.cmbSelec.Name = "cmbSelec";
-			this.cmbSelec.Size = new System.Drawing.Size(121, 28);
-			this.cmbSelec.TabIndex = 4;
-			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(36, 257);
+			this.label2.Location = new System.Drawing.Point(36, 206);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(100, 23);
 			this.label2.TabIndex = 5;
@@ -140,7 +125,7 @@ namespace GermanxChino
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(163, 257);
+			this.label3.Location = new System.Drawing.Point(159, 206);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(100, 23);
 			this.label3.TabIndex = 6;
@@ -148,7 +133,7 @@ namespace GermanxChino
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(330, 257);
+			this.label4.Location = new System.Drawing.Point(283, 206);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(100, 23);
 			this.label4.TabIndex = 7;
@@ -156,7 +141,7 @@ namespace GermanxChino
 			// 
 			// txtCan
 			// 
-			this.txtCan.Location = new System.Drawing.Point(159, 281);
+			this.txtCan.Location = new System.Drawing.Point(155, 233);
 			this.txtCan.Name = "txtCan";
 			this.txtCan.Size = new System.Drawing.Size(100, 26);
 			this.txtCan.TabIndex = 9;
@@ -164,7 +149,7 @@ namespace GermanxChino
 			// 
 			// txtTo
 			// 
-			this.txtTo.Location = new System.Drawing.Point(313, 281);
+			this.txtTo.Location = new System.Drawing.Point(283, 233);
 			this.txtTo.Name = "txtTo";
 			this.txtTo.Size = new System.Drawing.Size(100, 26);
 			this.txtTo.TabIndex = 13;
@@ -178,9 +163,9 @@ namespace GermanxChino
 									this.Cantidad,
 									this.Total});
 			this.lvReg.GridLines = true;
-			this.lvReg.Location = new System.Drawing.Point(0, 339);
+			this.lvReg.Location = new System.Drawing.Point(59, 286);
 			this.lvReg.Name = "lvReg";
-			this.lvReg.Size = new System.Drawing.Size(860, 192);
+			this.lvReg.Size = new System.Drawing.Size(736, 192);
 			this.lvReg.TabIndex = 14;
 			this.lvReg.UseCompatibleStateImageBehavior = false;
 			this.lvReg.View = System.Windows.Forms.View.Details;
@@ -212,7 +197,7 @@ namespace GermanxChino
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(339, 558);
+			this.label5.Location = new System.Drawing.Point(269, 501);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(100, 23);
 			this.label5.TabIndex = 15;
@@ -220,15 +205,15 @@ namespace GermanxChino
 			// 
 			// label6
 			// 
-			this.label6.Location = new System.Drawing.Point(115, 558);
+			this.label6.Location = new System.Drawing.Point(59, 501);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(100, 23);
+			this.label6.Size = new System.Drawing.Size(79, 23);
 			this.label6.TabIndex = 16;
 			this.label6.Text = "Subtotal:";
 			// 
 			// label7
 			// 
-			this.label7.Location = new System.Drawing.Point(596, 555);
+			this.label7.Location = new System.Drawing.Point(596, 501);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(118, 23);
 			this.label7.TabIndex = 17;
@@ -236,7 +221,7 @@ namespace GermanxChino
 			// 
 			// label8
 			// 
-			this.label8.Location = new System.Drawing.Point(578, 595);
+			this.label8.Location = new System.Drawing.Point(578, 543);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(136, 23);
 			this.label8.TabIndex = 18;
@@ -244,22 +229,22 @@ namespace GermanxChino
 			// 
 			// label9
 			// 
-			this.label9.Location = new System.Drawing.Point(614, 642);
+			this.label9.Location = new System.Drawing.Point(638, 585);
 			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(100, 23);
+			this.label9.Size = new System.Drawing.Size(76, 23);
 			this.label9.TabIndex = 19;
 			this.label9.Text = "Cambio:";
 			// 
 			// txtNeto
 			// 
-			this.txtNeto.Location = new System.Drawing.Point(720, 552);
+			this.txtNeto.Location = new System.Drawing.Point(720, 498);
 			this.txtNeto.Name = "txtNeto";
 			this.txtNeto.Size = new System.Drawing.Size(100, 26);
 			this.txtNeto.TabIndex = 20;
 			// 
 			// txtPa
 			// 
-			this.txtPa.Location = new System.Drawing.Point(720, 592);
+			this.txtPa.Location = new System.Drawing.Point(720, 540);
 			this.txtPa.Name = "txtPa";
 			this.txtPa.Size = new System.Drawing.Size(100, 26);
 			this.txtPa.TabIndex = 21;
@@ -267,23 +252,23 @@ namespace GermanxChino
 			// 
 			// txtCam
 			// 
-			this.txtCam.Location = new System.Drawing.Point(720, 639);
+			this.txtCam.Location = new System.Drawing.Point(720, 582);
 			this.txtCam.Name = "txtCam";
 			this.txtCam.Size = new System.Drawing.Size(100, 26);
 			this.txtCam.TabIndex = 22;
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(115, 635);
+			this.button1.Location = new System.Drawing.Point(59, 582);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(88, 27);
+			this.button1.Size = new System.Drawing.Size(85, 27);
 			this.button1.TabIndex = 23;
 			this.button1.Text = "Guardar";
 			this.button1.UseVisualStyleBackColor = true;
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(230, 635);
+			this.button2.Location = new System.Drawing.Point(169, 582);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(75, 27);
 			this.button2.TabIndex = 24;
@@ -292,7 +277,7 @@ namespace GermanxChino
 			// 
 			// btnIm
 			// 
-			this.btnIm.Location = new System.Drawing.Point(330, 635);
+			this.btnIm.Location = new System.Drawing.Point(269, 582);
 			this.btnIm.Name = "btnIm";
 			this.btnIm.Size = new System.Drawing.Size(75, 27);
 			this.btnIm.TabIndex = 25;
@@ -302,7 +287,7 @@ namespace GermanxChino
 			// 
 			// btnAgre
 			// 
-			this.btnAgre.Location = new System.Drawing.Point(470, 226);
+			this.btnAgre.Location = new System.Drawing.Point(470, 183);
 			this.btnAgre.Name = "btnAgre";
 			this.btnAgre.Size = new System.Drawing.Size(162, 38);
 			this.btnAgre.TabIndex = 26;
@@ -312,7 +297,7 @@ namespace GermanxChino
 			// 
 			// btnEli
 			// 
-			this.btnEli.Location = new System.Drawing.Point(470, 275);
+			this.btnEli.Location = new System.Drawing.Point(470, 227);
 			this.btnEli.Name = "btnEli";
 			this.btnEli.Size = new System.Drawing.Size(162, 38);
 			this.btnEli.TabIndex = 27;
@@ -322,7 +307,7 @@ namespace GermanxChino
 			// 
 			// txtDes
 			// 
-			this.txtDes.Location = new System.Drawing.Point(445, 555);
+			this.txtDes.Location = new System.Drawing.Point(375, 498);
 			this.txtDes.Name = "txtDes";
 			this.txtDes.Size = new System.Drawing.Size(100, 26);
 			this.txtDes.TabIndex = 28;
@@ -330,14 +315,14 @@ namespace GermanxChino
 			// 
 			// txtSub
 			// 
-			this.txtSub.Location = new System.Drawing.Point(221, 555);
+			this.txtSub.Location = new System.Drawing.Point(144, 498);
 			this.txtSub.Name = "txtSub";
 			this.txtSub.Size = new System.Drawing.Size(100, 26);
 			this.txtSub.TabIndex = 29;
 			// 
 			// label10
 			// 
-			this.label10.Location = new System.Drawing.Point(80, 140);
+			this.label10.Location = new System.Drawing.Point(80, 125);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(123, 23);
 			this.label10.TabIndex = 30;
@@ -346,7 +331,7 @@ namespace GermanxChino
 			// pictureBox2
 			// 
 			this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-			this.pictureBox2.Location = new System.Drawing.Point(660, 125);
+			this.pictureBox2.Location = new System.Drawing.Point(675, 109);
 			this.pictureBox2.Name = "pictureBox2";
 			this.pictureBox2.Size = new System.Drawing.Size(170, 171);
 			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -362,7 +347,7 @@ namespace GermanxChino
 									"Muffins salados",
 									"Buñuelos salados",
 									"Galletas saladas"});
-			this.cmbSal.Location = new System.Drawing.Point(511, 159);
+			this.cmbSal.Location = new System.Drawing.Point(502, 120);
 			this.cmbSal.Name = "cmbSal";
 			this.cmbSal.Size = new System.Drawing.Size(121, 28);
 			this.cmbSal.TabIndex = 32;
@@ -378,7 +363,7 @@ namespace GermanxChino
 									"Pay de queso",
 									"Crepa dulce",
 									"Brownie de chocolate"});
-			this.cmbDul.Location = new System.Drawing.Point(511, 159);
+			this.cmbDul.Location = new System.Drawing.Point(502, 120);
 			this.cmbDul.Name = "cmbDul";
 			this.cmbDul.Size = new System.Drawing.Size(121, 28);
 			this.cmbDul.TabIndex = 33;
@@ -387,7 +372,7 @@ namespace GermanxChino
 			// 
 			// txtPre
 			// 
-			this.txtPre.Location = new System.Drawing.Point(12, 281);
+			this.txtPre.Location = new System.Drawing.Point(32, 233);
 			this.txtPre.Name = "txtPre";
 			this.txtPre.Size = new System.Drawing.Size(100, 26);
 			this.txtPre.TabIndex = 35;
@@ -396,7 +381,7 @@ namespace GermanxChino
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(857, 687);
+			this.ClientSize = new System.Drawing.Size(857, 617);
 			this.Controls.Add(this.txtPre);
 			this.Controls.Add(this.cmbDul);
 			this.Controls.Add(this.cmbSal);
@@ -423,7 +408,6 @@ namespace GermanxChino
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.cmbSelec);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.rdbSal);
 			this.Controls.Add(this.rdbDul);
@@ -467,7 +451,6 @@ namespace GermanxChino
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.ComboBox cmbSelec;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.RadioButton rdbSal;
 		private System.Windows.Forms.RadioButton rdbDul;

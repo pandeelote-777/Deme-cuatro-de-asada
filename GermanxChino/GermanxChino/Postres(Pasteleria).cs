@@ -64,6 +64,8 @@ namespace GermanxChino
 			txtPre.Text=(0).ToString("C");
 			txtTo.Text=(0).ToString("C");
 			txtSub.Text=(0).ToString("C");
+			txtNeto.Text=(0).ToString("C");
+			txtCam.Text=(0).ToString("C");
 			
 		}
 		
@@ -133,7 +135,7 @@ namespace GermanxChino
 			else
     			des = 0;
 			imn = st-des;
-			txtNeto.Text=imn.ToString();
+			txtNeto.Text=imn.ToString("C");
 		}
 		
 		void BtnEliClick(object sender, EventArgs e)
@@ -154,7 +156,7 @@ namespace GermanxChino
 			else
     			pag = 0;
 			double cam = pag-imn;
-			txtCam.Text=cam.ToString();
+			txtCam.Text=cam.ToString("C");
 		}
 		
 		void BtnImClick(object sender, EventArgs e)

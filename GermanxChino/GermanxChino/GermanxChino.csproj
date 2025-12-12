@@ -47,6 +47,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boleta.cs" />
+    <Compile Include="Boleta.Designer.cs">
+      <DependentUpon>Boleta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Empleados.cs" />
     <Compile Include="Empleados.Designer.cs">
       <DependentUpon>Empleados.cs</DependentUpon>
