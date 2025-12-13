@@ -98,9 +98,6 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Postres%28Pasteleria%29.resx">
       <DependentUpon>Postres%28Pasteleria%29.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,8 +1,8 @@
 ﻿/*
  * Creado por SharpDevelop.
  * Usuario: tijam
- * Fecha: 06/12/2025
- * Hora: 07:39 p. m.
+ * Fecha: 13/12/2025
+ * Hora: 03:20 p. m.
  * 
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
@@ -17,9 +17,6 @@ namespace GermanxChino
 	/// </summary>
 	public partial class Menu : Form
 	{
-		SegundoMenu s = new SegundoMenu();
-		Postres_Pasteleria_ p = new Postres_Pasteleria_();
-		Empleados Em = new Empleados();
 		public Menu()
 		{
 			//
@@ -30,36 +27,6 @@ namespace GermanxChino
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
-		}	
-		void TolPasteleriaClick(object sender, EventArgs e)
-		{
-			p.MdiParent=this;
-			p.WindowState=FormWindowState.Maximized;
-			p.Show();
-			this.Em.Hide();
-			this.s.Hide();
-		}
-		
-		void TolEmpleadosClick(object sender, EventArgs e)
-		{
-			Em.MdiParent=this;
-			p.WindowState=FormWindowState.Maximized;
-			Em.Show();
-			this.p.Hide();
-			this.s.Hide();
-		}
-		
-		void SalirToolStripMenuItemClick(object sender, EventArgs e)
-		{
-			Application.Exit();
-		}
-		
-		void TolMasClick(object sender, EventArgs e)
-		{
-			s.MdiParent=this;
-			s.Show();
-			this.p.Hide();
-			this.Em.Hide();
 		}
 	}
 }
