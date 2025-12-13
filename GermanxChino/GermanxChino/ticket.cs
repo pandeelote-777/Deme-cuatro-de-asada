@@ -1,0 +1,37 @@
+﻿/*
+ * Creado por SharpDevelop.
+ * Usuario: a4dew
+ * Fecha: 10/12/2025
+ * Hora: 05:31 p. m.
+ * 
+ * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
+ */
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace GermanxChino
+{
+	/// <summary>
+	/// Description of ticket.
+	/// </summary>
+	public partial class ticket : Form
+	{
+		public ticket()
+		{
+			//
+			// The InitializeComponent() call is required for Windows Forms designer support.
+			//
+			InitializeComponent();
+			
+			//
+			// TODO: Add constructor code after the InitializeComponent() call.
+			//
+		}
+		
+		void TicketLoad(object sender, EventArgs e)
+		{
+			txtFe.Text=DateTime.Today.Date.ToString("d");
+		}
+	}
+}

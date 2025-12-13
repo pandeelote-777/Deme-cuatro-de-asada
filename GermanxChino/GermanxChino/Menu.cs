@@ -17,6 +17,7 @@ namespace GermanxChino
 	/// </summary>
 	public partial class Menu : Form
 	{
+		SegundoMenu s = new SegundoMenu();
 		Postres_Pasteleria_ p = new Postres_Pasteleria_();
 		Empleados Em = new Empleados();
 		public Menu()
@@ -36,6 +37,7 @@ namespace GermanxChino
 			p.WindowState=FormWindowState.Maximized;
 			p.Show();
 			this.Em.Hide();
+			this.s.Hide();
 		}
 		
 		void TolEmpleadosClick(object sender, EventArgs e)
@@ -44,11 +46,20 @@ namespace GermanxChino
 			p.WindowState=FormWindowState.Maximized;
 			Em.Show();
 			this.p.Hide();
+			this.s.Hide();
 		}
 		
 		void SalirToolStripMenuItemClick(object sender, EventArgs e)
 		{
 			Application.Exit();
+		}
+		
+		void TolMasClick(object sender, EventArgs e)
+		{
+			s.MdiParent=this;
+			s.Show();
+			this.p.Hide();
+			this.Em.Hide();
 		}
 	}
 }
