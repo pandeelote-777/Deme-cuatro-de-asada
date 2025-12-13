@@ -40,7 +40,8 @@ namespace GermanxChino
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.tolPasteleria = new System.Windows.Forms.ToolStripButton();
 			this.tolEmpleados = new System.Windows.Forms.ToolStripButton();
-			this.tolSalir = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+			this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -49,10 +50,10 @@ namespace GermanxChino
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.tolPasteleria,
 									this.tolEmpleados,
-									this.tolSalir});
+									this.toolStripSplitButton1});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Size = new System.Drawing.Size(763, 25);
+			this.toolStrip1.Size = new System.Drawing.Size(763, 27);
 			this.toolStrip1.TabIndex = 2;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
@@ -62,7 +63,7 @@ namespace GermanxChino
 			this.tolPasteleria.Image = ((System.Drawing.Image)(resources.GetObject("tolPasteleria.Image")));
 			this.tolPasteleria.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tolPasteleria.Name = "tolPasteleria";
-			this.tolPasteleria.Size = new System.Drawing.Size(77, 22);
+			this.tolPasteleria.Size = new System.Drawing.Size(92, 24);
 			this.tolPasteleria.Text = "Pasteleria";
 			this.tolPasteleria.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.tolPasteleria.Click += new System.EventHandler(this.TolPasteleriaClick);
@@ -72,24 +73,32 @@ namespace GermanxChino
 			this.tolEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("tolEmpleados.Image")));
 			this.tolEmpleados.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tolEmpleados.Name = "tolEmpleados";
-			this.tolEmpleados.Size = new System.Drawing.Size(85, 22);
+			this.tolEmpleados.Size = new System.Drawing.Size(103, 24);
 			this.tolEmpleados.Text = "Empleados";
 			this.tolEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.tolEmpleados.Click += new System.EventHandler(this.TolEmpleadosClick);
 			// 
-			// tolSalir
+			// toolStripSplitButton1
 			// 
-			this.tolSalir.Image = ((System.Drawing.Image)(resources.GetObject("tolSalir.Image")));
-			this.tolSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.tolSalir.Name = "tolSalir";
-			this.tolSalir.Size = new System.Drawing.Size(49, 22);
-			this.tolSalir.Text = "Salir";
-			this.tolSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-			this.tolSalir.Click += new System.EventHandler(this.TolSalirClick);
+			this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+									this.salirToolStripMenuItem});
+			this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
+			this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+			this.toolStripSplitButton1.Size = new System.Drawing.Size(97, 24);
+			this.toolStripSplitButton1.Text = "Archivos";
+			this.toolStripSplitButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+			// 
+			// salirToolStripMenuItem
+			// 
+			this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+			this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+			this.salirToolStripMenuItem.Text = "Salir";
+			this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItemClick);
 			// 
 			// Menu
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Blue;
 			this.ClientSize = new System.Drawing.Size(763, 469);
@@ -104,7 +113,8 @@ namespace GermanxChino
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
-		private System.Windows.Forms.ToolStripButton tolSalir;
+		private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
 		private System.Windows.Forms.ToolStripButton tolEmpleados;
 		private System.Windows.Forms.ToolStripButton tolPasteleria;
 		private System.Windows.Forms.ToolStrip toolStrip1;

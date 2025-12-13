@@ -117,7 +117,7 @@ namespace GermanxChino
 			// 
 			this.txtCodigoEmpleado.Location = new System.Drawing.Point(169, 10);
 			this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
-			this.txtCodigoEmpleado.Size = new System.Drawing.Size(126, 22);
+			this.txtCodigoEmpleado.Size = new System.Drawing.Size(126, 26);
 			this.txtCodigoEmpleado.TabIndex = 6;
 			this.txtCodigoEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
@@ -125,7 +125,7 @@ namespace GermanxChino
 			// 
 			this.txtNombreEmpleado.Location = new System.Drawing.Point(169, 37);
 			this.txtNombreEmpleado.Name = "txtNombreEmpleado";
-			this.txtNombreEmpleado.Size = new System.Drawing.Size(126, 22);
+			this.txtNombreEmpleado.Size = new System.Drawing.Size(126, 26);
 			this.txtNombreEmpleado.TabIndex = 7;
 			this.txtNombreEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
@@ -140,7 +140,7 @@ namespace GermanxChino
 									"Conserge"});
 			this.cboPuesto.Location = new System.Drawing.Point(169, 65);
 			this.cboPuesto.Name = "cboPuesto";
-			this.cboPuesto.Size = new System.Drawing.Size(126, 24);
+			this.cboPuesto.Size = new System.Drawing.Size(126, 28);
 			this.cboPuesto.TabIndex = 8;
 			// 
 			// cboSex
@@ -151,14 +151,14 @@ namespace GermanxChino
 									"Femenino"});
 			this.cboSex.Location = new System.Drawing.Point(169, 121);
 			this.cboSex.Name = "cboSex";
-			this.cboSex.Size = new System.Drawing.Size(126, 24);
+			this.cboSex.Size = new System.Drawing.Size(126, 28);
 			this.cboSex.TabIndex = 10;
 			// 
 			// rdbRegular
 			// 
 			this.rdbRegular.Location = new System.Drawing.Point(27, 10);
 			this.rdbRegular.Name = "rdbRegular";
-			this.rdbRegular.Size = new System.Drawing.Size(80, 24);
+			this.rdbRegular.Size = new System.Drawing.Size(93, 24);
 			this.rdbRegular.TabIndex = 11;
 			this.rdbRegular.TabStop = true;
 			this.rdbRegular.Text = "Regular";
@@ -166,9 +166,9 @@ namespace GermanxChino
 			// 
 			// rdbContrato
 			// 
-			this.rdbContrato.Location = new System.Drawing.Point(141, 10);
+			this.rdbContrato.Location = new System.Drawing.Point(123, 11);
 			this.rdbContrato.Name = "rdbContrato";
-			this.rdbContrato.Size = new System.Drawing.Size(88, 24);
+			this.rdbContrato.Size = new System.Drawing.Size(107, 24);
 			this.rdbContrato.TabIndex = 12;
 			this.rdbContrato.TabStop = true;
 			this.rdbContrato.Text = "Contrato";
@@ -200,7 +200,7 @@ namespace GermanxChino
 			this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnActualizar.Location = new System.Drawing.Point(477, 158);
 			this.btnActualizar.Name = "btnActualizar";
-			this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+			this.btnActualizar.Size = new System.Drawing.Size(106, 30);
 			this.btnActualizar.TabIndex = 15;
 			this.btnActualizar.Text = "Actualizar";
 			this.btnActualizar.UseVisualStyleBackColor = false;
@@ -213,7 +213,7 @@ namespace GermanxChino
 			this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnQuitar.Location = new System.Drawing.Point(589, 157);
 			this.btnQuitar.Name = "btnQuitar";
-			this.btnQuitar.Size = new System.Drawing.Size(75, 23);
+			this.btnQuitar.Size = new System.Drawing.Size(75, 31);
 			this.btnQuitar.TabIndex = 16;
 			this.btnQuitar.Text = "Quitar";
 			this.btnQuitar.UseVisualStyleBackColor = false;
@@ -272,13 +272,13 @@ namespace GermanxChino
 			// 
 			this.datiFechaNac.Location = new System.Drawing.Point(169, 94);
 			this.datiFechaNac.Name = "datiFechaNac";
-			this.datiFechaNac.Size = new System.Drawing.Size(253, 22);
+			this.datiFechaNac.Size = new System.Drawing.Size(293, 26);
 			this.datiFechaNac.TabIndex = 21;
-			this.datiFechaNac.Value = new System.DateTime(2025, 12, 10, 13, 30, 48, 0);
+			this.datiFechaNac.Value = new System.DateTime(2025, 12, 12, 0, 0, 0, 0);
 			// 
 			// Empleados
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.RosyBrown;
 			this.ClientSize = new System.Drawing.Size(732, 409);
@@ -305,6 +305,7 @@ namespace GermanxChino
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "Empleados";
 			this.Text = "Detalles de empleado";
+			this.Load += new System.EventHandler(this.EmpleadosLoad);
 			this.groupBox1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataLista)).EndInit();

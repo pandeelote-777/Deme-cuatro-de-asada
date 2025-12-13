@@ -33,6 +33,7 @@ namespace GermanxChino
 		void TolPasteleriaClick(object sender, EventArgs e)
 		{
 			p.MdiParent=this;
+			p.WindowState=FormWindowState.Maximized;
 			p.Show();
 			this.Em.Hide();
 		}
@@ -40,11 +41,12 @@ namespace GermanxChino
 		void TolEmpleadosClick(object sender, EventArgs e)
 		{
 			Em.MdiParent=this;
+			p.WindowState=FormWindowState.Maximized;
 			Em.Show();
 			this.p.Hide();
 		}
 		
-		void TolSalirClick(object sender, EventArgs e)
+		void SalirToolStripMenuItemClick(object sender, EventArgs e)
 		{
 			Application.Exit();
 		}
