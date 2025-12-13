@@ -83,9 +83,9 @@ namespace GermanxChino
 			this.esferaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cuboToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.piramideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.pbImagen = new System.Windows.Forms.PictureBox();
 			this.menuStrip1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// button14
@@ -188,7 +188,7 @@ namespace GermanxChino
 			this.lbl3.Location = new System.Drawing.Point(50, 166);
 			this.lbl3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lbl3.Name = "lbl3";
-			this.lbl3.Size = new System.Drawing.Size(681, 66);
+			this.lbl3.Size = new System.Drawing.Size(391, 103);
 			this.lbl3.TabIndex = 38;
 			// 
 			// button8
@@ -313,7 +313,7 @@ namespace GermanxChino
 			this.lbl2.Location = new System.Drawing.Point(50, 124);
 			this.lbl2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lbl2.Name = "lbl2";
-			this.lbl2.Size = new System.Drawing.Size(681, 156);
+			this.lbl2.Size = new System.Drawing.Size(483, 108);
 			this.lbl2.TabIndex = 26;
 			// 
 			// lbl1
@@ -322,7 +322,7 @@ namespace GermanxChino
 			this.lbl1.Location = new System.Drawing.Point(50, 80);
 			this.lbl1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lbl1.Name = "lbl1";
-			this.lbl1.Size = new System.Drawing.Size(681, 59);
+			this.lbl1.Size = new System.Drawing.Size(483, 59);
 			this.lbl1.TabIndex = 25;
 			// 
 			// menuStrip1
@@ -535,13 +535,14 @@ namespace GermanxChino
 			this.piramideToolStripMenuItem.Text = "Piramide";
 			this.piramideToolStripMenuItem.Click += new System.EventHandler(this.PiramideToolStripMenuItemClick);
 			// 
-			// pictureBox1
+			// pbImagen
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(448, 235);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(236, 199);
-			this.pictureBox1.TabIndex = 47;
-			this.pictureBox1.TabStop = false;
+			this.pbImagen.Location = new System.Drawing.Point(448, 235);
+			this.pbImagen.Name = "pbImagen";
+			this.pbImagen.Size = new System.Drawing.Size(236, 199);
+			this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pbImagen.TabIndex = 47;
+			this.pbImagen.TabStop = false;
 			// 
 			// SegundoMenu
 			// 
@@ -549,7 +550,7 @@ namespace GermanxChino
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Thistle;
 			this.ClientSize = new System.Drawing.Size(755, 465);
-			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.pbImagen);
 			this.Controls.Add(this.button14);
 			this.Controls.Add(this.button13);
 			this.Controls.Add(this.button12);
@@ -573,10 +574,10 @@ namespace GermanxChino
 			this.Controls.Add(this.lbl1);
 			this.Controls.Add(this.menuStrip1);
 			this.Name = "SegundoMenu";
-			this.Text = "SegundoMenu";
+			this.Text = "Mas opciones ";
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
@@ -618,7 +619,7 @@ namespace GermanxChino
 		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Button button7;
 		private System.Windows.Forms.Button button8;
-		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.PictureBox pbImagen;
 		private System.Windows.Forms.Label lbl3;
 		private System.Windows.Forms.TextBox txt3;
 		private System.Windows.Forms.Button button9;

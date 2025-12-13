@@ -49,6 +49,7 @@ namespace GermanxChino
 			button12.Visible=false;
 			button13.Visible=false;
 			button14.Visible=false;
+			pbImagen.Visible=false;
 		}
 		public void IngresarUnDato(){
 			txt1.Visible=true;
@@ -158,8 +159,10 @@ namespace GermanxChino
 		{
 			ApagarBotones();
 			IngresarUnDato();
+			pbImagen.Visible=true;
 			lbl1.Text= "Ingresar medida de lado:";
 		    button6.Visible=true;
+		    pbImagen.Image=Imagenes.Cuadrado;
 		}
 		
 		void Button6Click(object sender, EventArgs e)
@@ -174,8 +177,10 @@ namespace GermanxChino
 		{
 			ApagarBotones();
 			IngresarUnDato();
+			pbImagen.Visible=true;
 			lbl1.Text= "Ingresar radio:";
 		    button7.Visible=true;
+		    pbImagen.Image=Imagenes.Circunferencia;
 		}
 		
 		void Button7Click(object sender, EventArgs e)
@@ -190,8 +195,10 @@ namespace GermanxChino
 		{
 			ApagarBotones();
 			IngresarUnDato();
+			pbImagen.Visible=true;
 			lbl1.Text= "Ingresar medida del lado:";
 		    button8.Visible=true;
+		    pbImagen.Image=Imagenes.Cubo;
 		}
 		
 		void Button8Click(object sender, EventArgs e)
@@ -231,9 +238,11 @@ namespace GermanxChino
 		{
 			ApagarBotones();
 			IngresarDosDatos();
+			pbImagen.Visible=true;
 			lbl1.Text= "Ingresar medida de la base:";
 		    lbl2.Text="Ingresar medida de la altura:";
 		    button10.Visible=true;
+		    pbImagen.Image=Imagenes.Rectangulo;
 		}
 		
 		void Button10Click(object sender, EventArgs e)
@@ -249,9 +258,11 @@ namespace GermanxChino
 		{
 			ApagarBotones();
 			IngresarDosDatos();
+			pbImagen.Visible=true;
 			lbl1.Text= "Ingresar medida de la base:";
 		    lbl2.Text="Ingresar medida de la altura:";
 		    button11.Visible=true;
+		    pbImagen.Image=Imagenes.Triangulo;
 		}
 		
 		void Button11Click(object sender, EventArgs e)
@@ -267,11 +278,13 @@ namespace GermanxChino
 		{
 			ApagarBotones();
 			IngresarDosDatos();
+			pbImagen.Visible=true;
 			lbl1.Text= "Ingresar medida de la base mayor:";
 		    lbl2.Text="Ingresar medida de la base menor:";
 		    lbl3.Text="Ingresar medida de un lado:";
 		    button12.Visible=true;
 		    txt3.Visible=true;
+		    pbImagen.Image=Imagenes.Trapecio;
 		}
 		
 		void Button12Click(object sender, EventArgs e)
@@ -288,8 +301,10 @@ namespace GermanxChino
 		{
 			ApagarBotones();
 			IngresarUnDato();
+			pbImagen.Visible=true;
 			lbl1.Text= "Ingresar radio:";
 		    button13.Visible=true;
+		    pbImagen.Image=Imagenes.Esfera;
 		}
 		
 		void Button13Click(object sender, EventArgs e)
@@ -304,12 +319,12 @@ namespace GermanxChino
 		{
 			ApagarBotones();
 			IngresarDosDatos();
+			pbImagen.Visible=true;
 			lbl1.Text= "Ingresar Area de la base:";
 		    lbl2.Text="Ingresar altura:";
 		    button14.Visible=true;
+		    pbImagen.Image=Imagenes.Piramide;
 		}
-		
-		
 		
 		void Button14Click(object sender, EventArgs e)
 		{
