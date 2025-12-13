@@ -36,12 +36,18 @@ namespace GermanxChino
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.SuspendLayout();
 			// 
 			// Menu
 			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Text = "Menu";
+			this.ClientSize = new System.Drawing.Size(352, 316);
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.Name = "Menu";
+			this.Text = "Menu";
+			this.ResumeLayout(false);
 		}
 	}
 }
