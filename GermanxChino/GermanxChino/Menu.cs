@@ -28,5 +28,49 @@ namespace GermanxChino
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		
+		void ToolStripButton1Click(object sender, EventArgs e)
+		{
+			cerAb(new Empleados());
+		}
+		
+		void TolPasClick(object sender, EventArgs e)
+		{
+			cerAb(new Postres_Pasteleria_());
+		}
+		
+		void TolOpcClick(object sender, EventArgs e)
+		{
+			cerAb(new SegundoMenu());
+		}
+		
+		void SalirToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			DialogResult repuesta =MessageBox.Show("¿Estas seguro que quieres salir?","Confirmación",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button2);
+			if(repuesta==DialogResult.Yes){
+				Application.Exit();
+			}
+		}
+		
+		void TolBoleClick(object sender, EventArgs e)
+		{
+			cerAb(new Boleta());
+		}
+		
+		void ToolAcerClick(object sender, EventArgs e)
+		{
+			cerAb(new Acerca());
+		}
+		//Metodo para serrar los formularios cuando se ponga otro y poner el otro
+		void cerAb(Form cer){
+			foreach (Form f in this.MdiChildren) {
+				f.Close();
+			}
+			
+			cer.MdiParent=this;
+			cer.WindowState= FormWindowState.Maximized;
+			cer.Show();
+		}
+
 	}
 }

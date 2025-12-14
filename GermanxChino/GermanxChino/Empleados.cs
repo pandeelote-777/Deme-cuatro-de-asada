@@ -364,5 +364,10 @@ namespace GermanxChino
 			btnEliminar.Enabled = dataLista.Rows.Count > 1;
 			datiFechaNac.MaxDate=DateTime.Today.AddYears(-18);
 		}
+		
+		void BtnSalirClick(object sender, EventArgs e)
+		{
+			this.Close();
+		}
 	}
 }
