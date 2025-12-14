@@ -52,6 +52,7 @@ namespace GermanxChino
 			this.label10 = new System.Windows.Forms.Label();
 			this.lblTo = new System.Windows.Forms.Label();
 			this.lblCa = new System.Windows.Forms.Label();
+			this.btnRegre = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -190,11 +191,24 @@ namespace GermanxChino
 			this.lblCa.TabIndex = 16;
 			this.lblCa.Text = "label12";
 			// 
+			// btnRegre
+			// 
+			this.btnRegre.Font = new System.Drawing.Font("Microsoft Uighur", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnRegre.Location = new System.Drawing.Point(513, 542);
+			this.btnRegre.Name = "btnRegre";
+			this.btnRegre.Size = new System.Drawing.Size(143, 57);
+			this.btnRegre.TabIndex = 17;
+			this.btnRegre.Text = "Regresar ";
+			this.btnRegre.UseVisualStyleBackColor = true;
+			this.btnRegre.Click += new System.EventHandler(this.BtnRegreClick);
+			// 
 			// ticket
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.LavenderBlush;
 			this.ClientSize = new System.Drawing.Size(731, 747);
+			this.Controls.Add(this.btnRegre);
 			this.Controls.Add(this.lblCa);
 			this.Controls.Add(this.lblTo);
 			this.Controls.Add(this.label10);
@@ -217,6 +231,7 @@ namespace GermanxChino
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button btnRegre;
 		private System.Windows.Forms.Label lblCa;
 		private System.Windows.Forms.Label lblTo;
 		private System.Windows.Forms.Label label10;
