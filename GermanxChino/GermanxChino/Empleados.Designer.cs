@@ -36,6 +36,7 @@ namespace GermanxChino
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@ namespace GermanxChino
 			this.txtCodigoEmpleado = new System.Windows.Forms.TextBox();
 			this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
 			this.cboPuesto = new System.Windows.Forms.ComboBox();
-			this.txtFechaNac = new System.Windows.Forms.TextBox();
 			this.cboSex = new System.Windows.Forms.ComboBox();
 			this.rdbRegular = new System.Windows.Forms.RadioButton();
 			this.rdbContrato = new System.Windows.Forms.RadioButton();
@@ -55,11 +55,15 @@ namespace GermanxChino
 			this.btnQuitar = new System.Windows.Forms.Button();
 			this.dataLista = new System.Windows.Forms.DataGridView();
 			this.btnGuardar = new System.Windows.Forms.Button();
-			this.btnEliminar = new System.Windows.Forms.Button();
 			this.btnLimpiar = new System.Windows.Forms.Button();
+			this.erpHerror = new System.Windows.Forms.ErrorProvider(this.components);
+			this.datiFechaNac = new System.Windows.Forms.DateTimePicker();
+			this.btnEliminar = new System.Windows.Forms.Button();
+			this.btnSalir = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpHerror)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -114,44 +118,48 @@ namespace GermanxChino
 			// 
 			this.txtCodigoEmpleado.Location = new System.Drawing.Point(169, 10);
 			this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
-			this.txtCodigoEmpleado.Size = new System.Drawing.Size(126, 22);
+			this.txtCodigoEmpleado.Size = new System.Drawing.Size(126, 26);
 			this.txtCodigoEmpleado.TabIndex = 6;
+			this.txtCodigoEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// txtNombreEmpleado
 			// 
 			this.txtNombreEmpleado.Location = new System.Drawing.Point(169, 37);
 			this.txtNombreEmpleado.Name = "txtNombreEmpleado";
-			this.txtNombreEmpleado.Size = new System.Drawing.Size(126, 22);
+			this.txtNombreEmpleado.Size = new System.Drawing.Size(126, 26);
 			this.txtNombreEmpleado.TabIndex = 7;
+			this.txtNombreEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// cboPuesto
 			// 
 			this.cboPuesto.FormattingEnabled = true;
+			this.cboPuesto.Items.AddRange(new object[] {
+									"Operativo",
+									"Administrador",
+									"Surpevisor",
+									"Gerente",
+									"Conserge"});
 			this.cboPuesto.Location = new System.Drawing.Point(169, 65);
 			this.cboPuesto.Name = "cboPuesto";
-			this.cboPuesto.Size = new System.Drawing.Size(126, 24);
+			this.cboPuesto.Size = new System.Drawing.Size(126, 28);
 			this.cboPuesto.TabIndex = 8;
-			// 
-			// txtFechaNac
-			// 
-			this.txtFechaNac.Location = new System.Drawing.Point(169, 94);
-			this.txtFechaNac.Name = "txtFechaNac";
-			this.txtFechaNac.Size = new System.Drawing.Size(126, 22);
-			this.txtFechaNac.TabIndex = 9;
 			// 
 			// cboSex
 			// 
 			this.cboSex.FormattingEnabled = true;
+			this.cboSex.Items.AddRange(new object[] {
+									"Masculino",
+									"Femenino"});
 			this.cboSex.Location = new System.Drawing.Point(169, 121);
 			this.cboSex.Name = "cboSex";
-			this.cboSex.Size = new System.Drawing.Size(126, 24);
+			this.cboSex.Size = new System.Drawing.Size(126, 28);
 			this.cboSex.TabIndex = 10;
 			// 
 			// rdbRegular
 			// 
 			this.rdbRegular.Location = new System.Drawing.Point(27, 10);
 			this.rdbRegular.Name = "rdbRegular";
-			this.rdbRegular.Size = new System.Drawing.Size(80, 24);
+			this.rdbRegular.Size = new System.Drawing.Size(93, 24);
 			this.rdbRegular.TabIndex = 11;
 			this.rdbRegular.TabStop = true;
 			this.rdbRegular.Text = "Regular";
@@ -159,9 +167,9 @@ namespace GermanxChino
 			// 
 			// rdbContrato
 			// 
-			this.rdbContrato.Location = new System.Drawing.Point(141, 10);
+			this.rdbContrato.Location = new System.Drawing.Point(123, 11);
 			this.rdbContrato.Name = "rdbContrato";
-			this.rdbContrato.Size = new System.Drawing.Size(88, 24);
+			this.rdbContrato.Size = new System.Drawing.Size(107, 24);
 			this.rdbContrato.TabIndex = 12;
 			this.rdbContrato.TabStop = true;
 			this.rdbContrato.Text = "Contrato";
@@ -171,6 +179,7 @@ namespace GermanxChino
 			// 
 			this.groupBox1.Controls.Add(this.rdbRegular);
 			this.groupBox1.Controls.Add(this.rdbContrato);
+			this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.groupBox1.Location = new System.Drawing.Point(119, 148);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(235, 40);
@@ -179,7 +188,8 @@ namespace GermanxChino
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(428, 13);
+			this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.pictureBox1.Location = new System.Drawing.Point(502, 13);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(131, 131);
 			this.pictureBox1.TabIndex = 14;
@@ -187,22 +197,27 @@ namespace GermanxChino
 			// 
 			// btnActualizar
 			// 
-			this.btnActualizar.Location = new System.Drawing.Point(401, 158);
+			this.btnActualizar.BackColor = System.Drawing.Color.MistyRose;
+			this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnActualizar.Location = new System.Drawing.Point(477, 158);
 			this.btnActualizar.Name = "btnActualizar";
-			this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+			this.btnActualizar.Size = new System.Drawing.Size(106, 30);
 			this.btnActualizar.TabIndex = 15;
 			this.btnActualizar.Text = "Actualizar";
-			this.btnActualizar.UseVisualStyleBackColor = true;
+			this.btnActualizar.UseVisualStyleBackColor = false;
 			this.btnActualizar.Click += new System.EventHandler(this.BtnActualizarClick);
 			// 
 			// btnQuitar
 			// 
-			this.btnQuitar.Location = new System.Drawing.Point(513, 157);
+			this.btnQuitar.BackColor = System.Drawing.Color.MistyRose;
+			this.btnQuitar.Enabled = false;
+			this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnQuitar.Location = new System.Drawing.Point(589, 157);
 			this.btnQuitar.Name = "btnQuitar";
-			this.btnQuitar.Size = new System.Drawing.Size(75, 23);
+			this.btnQuitar.Size = new System.Drawing.Size(75, 31);
 			this.btnQuitar.TabIndex = 16;
 			this.btnQuitar.Text = "Quitar";
-			this.btnQuitar.UseVisualStyleBackColor = true;
+			this.btnQuitar.UseVisualStyleBackColor = false;
 			this.btnQuitar.Click += new System.EventHandler(this.BtnQuitarClick);
 			// 
 			// dataLista
@@ -210,41 +225,78 @@ namespace GermanxChino
 			this.dataLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataLista.Location = new System.Drawing.Point(13, 205);
 			this.dataLista.Name = "dataLista";
-			this.dataLista.Size = new System.Drawing.Size(586, 150);
+			this.dataLista.Size = new System.Drawing.Size(707, 150);
 			this.dataLista.TabIndex = 17;
 			// 
 			// btnGuardar
 			// 
-			this.btnGuardar.Location = new System.Drawing.Point(72, 361);
+			this.btnGuardar.BackColor = System.Drawing.Color.MistyRose;
+			this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnGuardar.Location = new System.Drawing.Point(12, 361);
 			this.btnGuardar.Name = "btnGuardar";
 			this.btnGuardar.Size = new System.Drawing.Size(83, 38);
 			this.btnGuardar.TabIndex = 18;
 			this.btnGuardar.Text = "Guardar";
-			this.btnGuardar.UseVisualStyleBackColor = true;
-			// 
-			// btnEliminar
-			// 
-			this.btnEliminar.Location = new System.Drawing.Point(243, 361);
-			this.btnEliminar.Name = "btnEliminar";
-			this.btnEliminar.Size = new System.Drawing.Size(83, 38);
-			this.btnEliminar.TabIndex = 19;
-			this.btnEliminar.Text = "Eliminar";
-			this.btnEliminar.UseVisualStyleBackColor = true;
+			this.btnGuardar.UseVisualStyleBackColor = false;
+			this.btnGuardar.Click += new System.EventHandler(this.BtnGuardarClick);
 			// 
 			// btnLimpiar
 			// 
-			this.btnLimpiar.Location = new System.Drawing.Point(428, 361);
+			this.btnLimpiar.BackColor = System.Drawing.Color.MistyRose;
+			this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Arrow;
+			this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnLimpiar.Location = new System.Drawing.Point(637, 361);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(83, 38);
 			this.btnLimpiar.TabIndex = 20;
 			this.btnLimpiar.Text = "Limpiar";
-			this.btnLimpiar.UseVisualStyleBackColor = true;
+			this.btnLimpiar.UseVisualStyleBackColor = false;
+			this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiarClick);
+			// 
+			// erpHerror
+			// 
+			this.erpHerror.ContainerControl = this;
+			// 
+			// datiFechaNac
+			// 
+			this.datiFechaNac.Location = new System.Drawing.Point(169, 94);
+			this.datiFechaNac.Name = "datiFechaNac";
+			this.datiFechaNac.Size = new System.Drawing.Size(293, 26);
+			this.datiFechaNac.TabIndex = 21;
+			this.datiFechaNac.Value = new System.DateTime(2025, 12, 12, 0, 0, 0, 0);
+			// 
+			// btnEliminar
+			// 
+			this.btnEliminar.BackColor = System.Drawing.Color.MistyRose;
+			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnEliminar.Location = new System.Drawing.Point(104, 361);
+			this.btnEliminar.Name = "btnEliminar";
+			this.btnEliminar.Size = new System.Drawing.Size(83, 38);
+			this.btnEliminar.TabIndex = 19;
+			this.btnEliminar.Text = "Eliminar";
+			this.btnEliminar.UseVisualStyleBackColor = false;
+			this.btnEliminar.Click += new System.EventHandler(this.BtnEliminarClick);
+			// 
+			// btnSalir
+			// 
+			this.btnSalir.BackColor = System.Drawing.Color.MistyRose;
+			this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSalir.Location = new System.Drawing.Point(251, 361);
+			this.btnSalir.Name = "btnSalir";
+			this.btnSalir.Size = new System.Drawing.Size(83, 38);
+			this.btnSalir.TabIndex = 22;
+			this.btnSalir.Text = "Salir";
+			this.btnSalir.UseVisualStyleBackColor = false;
+			this.btnSalir.Click += new System.EventHandler(this.BtnSalirClick);
 			// 
 			// Empleados
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(611, 409);
+			this.BackColor = System.Drawing.Color.RosyBrown;
+			this.ClientSize = new System.Drawing.Size(732, 409);
+			this.Controls.Add(this.btnSalir);
+			this.Controls.Add(this.datiFechaNac);
 			this.Controls.Add(this.btnLimpiar);
 			this.Controls.Add(this.btnEliminar);
 			this.Controls.Add(this.btnGuardar);
@@ -254,7 +306,6 @@ namespace GermanxChino
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.cboSex);
-			this.Controls.Add(this.txtFechaNac);
 			this.Controls.Add(this.cboPuesto);
 			this.Controls.Add(this.txtNombreEmpleado);
 			this.Controls.Add(this.txtCodigoEmpleado);
@@ -268,12 +319,17 @@ namespace GermanxChino
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "Empleados";
 			this.Text = "Detalles de empleado";
+			this.Load += new System.EventHandler(this.EmpleadosLoad);
 			this.groupBox1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataLista)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpHerror)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button btnSalir;
+		private System.Windows.Forms.DateTimePicker datiFechaNac;
+		private System.Windows.Forms.ErrorProvider erpHerror;
 		private System.Windows.Forms.Button btnLimpiar;
 		private System.Windows.Forms.Button btnEliminar;
 		private System.Windows.Forms.Button btnGuardar;
@@ -285,7 +341,6 @@ namespace GermanxChino
 		private System.Windows.Forms.RadioButton rdbContrato;
 		private System.Windows.Forms.RadioButton rdbRegular;
 		private System.Windows.Forms.ComboBox cboSex;
-		private System.Windows.Forms.TextBox txtFechaNac;
 		private System.Windows.Forms.ComboBox cboPuesto;
 		private System.Windows.Forms.TextBox txtNombreEmpleado;
 		private System.Windows.Forms.TextBox txtCodigoEmpleado;
