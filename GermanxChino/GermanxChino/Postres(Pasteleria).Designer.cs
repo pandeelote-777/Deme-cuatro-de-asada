@@ -149,8 +149,10 @@ namespace GermanxChino
 			// 
 			// txtTo
 			// 
+			this.txtTo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.txtTo.Location = new System.Drawing.Point(283, 233);
 			this.txtTo.Name = "txtTo";
+			this.txtTo.ReadOnly = true;
 			this.txtTo.Size = new System.Drawing.Size(100, 26);
 			this.txtTo.TabIndex = 13;
 			// 
@@ -237,8 +239,10 @@ namespace GermanxChino
 			// 
 			// txtNeto
 			// 
+			this.txtNeto.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.txtNeto.Location = new System.Drawing.Point(720, 498);
 			this.txtNeto.Name = "txtNeto";
+			this.txtNeto.ReadOnly = true;
 			this.txtNeto.Size = new System.Drawing.Size(100, 26);
 			this.txtNeto.TabIndex = 20;
 			// 
@@ -252,8 +256,10 @@ namespace GermanxChino
 			// 
 			// txtCam
 			// 
+			this.txtCam.BackColor = System.Drawing.SystemColors.ControlLightLight;
 			this.txtCam.Location = new System.Drawing.Point(720, 582);
 			this.txtCam.Name = "txtCam";
+			this.txtCam.ReadOnly = true;
 			this.txtCam.Size = new System.Drawing.Size(100, 26);
 			this.txtCam.TabIndex = 22;
 			// 
@@ -315,8 +321,10 @@ namespace GermanxChino
 			// 
 			// txtSub
 			// 
+			this.txtSub.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.txtSub.Location = new System.Drawing.Point(144, 498);
 			this.txtSub.Name = "txtSub";
+			this.txtSub.ReadOnly = true;
 			this.txtSub.Size = new System.Drawing.Size(100, 26);
 			this.txtSub.TabIndex = 29;
 			// 
@@ -340,6 +348,7 @@ namespace GermanxChino
 			// 
 			// cmbSal
 			// 
+			this.cmbSal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbSal.FormattingEnabled = true;
 			this.cmbSal.Items.AddRange(new object[] {
 									"Pretzel",
@@ -356,6 +365,7 @@ namespace GermanxChino
 			// 
 			// cmbDul
 			// 
+			this.cmbDul.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbDul.FormattingEnabled = true;
 			this.cmbDul.Items.AddRange(new object[] {
 									"Helado",
@@ -372,8 +382,10 @@ namespace GermanxChino
 			// 
 			// txtPre
 			// 
+			this.txtPre.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.txtPre.Location = new System.Drawing.Point(32, 233);
 			this.txtPre.Name = "txtPre";
+			this.txtPre.ReadOnly = true;
 			this.txtPre.Size = new System.Drawing.Size(100, 26);
 			this.txtPre.TabIndex = 35;
 			// 

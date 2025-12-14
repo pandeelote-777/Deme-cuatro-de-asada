@@ -36,12 +36,16 @@ namespace GermanxChino
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.SuspendLayout();
 			// 
 			// Boleta
 			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Text = "Boleta";
+			this.ClientSize = new System.Drawing.Size(417, 364);
 			this.Name = "Boleta";
+			this.Text = "Boleta";
+			this.ResumeLayout(false);
 		}
 	}
 }
