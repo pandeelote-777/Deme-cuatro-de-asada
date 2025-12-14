@@ -55,10 +55,11 @@ namespace GermanxChino
 			this.btnQuitar = new System.Windows.Forms.Button();
 			this.dataLista = new System.Windows.Forms.DataGridView();
 			this.btnGuardar = new System.Windows.Forms.Button();
-			this.btnEliminar = new System.Windows.Forms.Button();
 			this.btnLimpiar = new System.Windows.Forms.Button();
 			this.erpHerror = new System.Windows.Forms.ErrorProvider(this.components);
 			this.datiFechaNac = new System.Windows.Forms.DateTimePicker();
+			this.btnEliminar = new System.Windows.Forms.Button();
+			this.btnSalir = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
@@ -239,18 +240,6 @@ namespace GermanxChino
 			this.btnGuardar.UseVisualStyleBackColor = false;
 			this.btnGuardar.Click += new System.EventHandler(this.BtnGuardarClick);
 			// 
-			// btnEliminar
-			// 
-			this.btnEliminar.BackColor = System.Drawing.Color.MistyRose;
-			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnEliminar.Location = new System.Drawing.Point(143, 361);
-			this.btnEliminar.Name = "btnEliminar";
-			this.btnEliminar.Size = new System.Drawing.Size(83, 38);
-			this.btnEliminar.TabIndex = 19;
-			this.btnEliminar.Text = "Eliminar";
-			this.btnEliminar.UseVisualStyleBackColor = false;
-			this.btnEliminar.Click += new System.EventHandler(this.BtnEliminarClick);
-			// 
 			// btnLimpiar
 			// 
 			this.btnLimpiar.BackColor = System.Drawing.Color.MistyRose;
@@ -276,12 +265,37 @@ namespace GermanxChino
 			this.datiFechaNac.TabIndex = 21;
 			this.datiFechaNac.Value = new System.DateTime(2025, 12, 12, 0, 0, 0, 0);
 			// 
+			// btnEliminar
+			// 
+			this.btnEliminar.BackColor = System.Drawing.Color.MistyRose;
+			this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnEliminar.Location = new System.Drawing.Point(104, 361);
+			this.btnEliminar.Name = "btnEliminar";
+			this.btnEliminar.Size = new System.Drawing.Size(83, 38);
+			this.btnEliminar.TabIndex = 19;
+			this.btnEliminar.Text = "Eliminar";
+			this.btnEliminar.UseVisualStyleBackColor = false;
+			this.btnEliminar.Click += new System.EventHandler(this.BtnEliminarClick);
+			// 
+			// btnSalir
+			// 
+			this.btnSalir.BackColor = System.Drawing.Color.MistyRose;
+			this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSalir.Location = new System.Drawing.Point(251, 361);
+			this.btnSalir.Name = "btnSalir";
+			this.btnSalir.Size = new System.Drawing.Size(83, 38);
+			this.btnSalir.TabIndex = 22;
+			this.btnSalir.Text = "Salir";
+			this.btnSalir.UseVisualStyleBackColor = false;
+			this.btnSalir.Click += new System.EventHandler(this.BtnSalirClick);
+			// 
 			// Empleados
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.RosyBrown;
 			this.ClientSize = new System.Drawing.Size(732, 409);
+			this.Controls.Add(this.btnSalir);
 			this.Controls.Add(this.datiFechaNac);
 			this.Controls.Add(this.btnLimpiar);
 			this.Controls.Add(this.btnEliminar);
@@ -313,6 +327,7 @@ namespace GermanxChino
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button btnSalir;
 		private System.Windows.Forms.DateTimePicker datiFechaNac;
 		private System.Windows.Forms.ErrorProvider erpHerror;
 		private System.Windows.Forms.Button btnLimpiar;
