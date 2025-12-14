@@ -28,10 +28,36 @@ namespace GermanxChino
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		public string sub
+		{
+			set{lblSub.Text = value;}
+		}
 		
+		public string de
+		{
+			set{lblDes.Text = value;}
+		}
+		
+		public string tol
+		{
+			set{lblTo.Text = value;}
+		}
+		
+		public string pa
+		{
+			set{lblPa.Text = value;}
+		}
+		
+		public string ca
+		{
+			set{lblCa.Text = value;}
+		}
 		void TicketLoad(object sender, EventArgs e)
 		{
 			txtFe.Text=DateTime.Today.Date.ToString("d");
+			lvPas.HideSelection=false;
+			lvPas.MultiSelect=false;
+
 		}
 	}
 }

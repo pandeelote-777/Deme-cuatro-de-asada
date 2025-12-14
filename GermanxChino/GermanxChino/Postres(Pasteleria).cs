@@ -159,9 +159,36 @@ namespace GermanxChino
 			txtCam.Text=cam.ToString("C");
 		}
 		
+		void ClonarListView(ListView o, ListView d)
+		{
+			d.Items.Clear();
+			d.Columns.Clear();
+			
+			foreach(ColumnHeader col in o.Columns)
+			{
+				d.Columns.Add((ColumnHeader)col.Clone());
+			}
+			
+			foreach(ListViewItem item in o.Items)
+			{
+				d.Items.Add((ListViewItem)item.Clone());
+			}
+			
+			d.View=o.View;
+			d.GridLines=o.GridLines;
+			d.FullRowSelect=o.FullRowSelect;
+		}
+		
 		void BtnImClick(object sender, EventArgs e)
 		{
 			ticket f = new ticket();
+			ClonarListView(this.lvReg, f.lvPas);
+			f.sub=txtSub.Text;
+			f.de=txtDes.Text;
+			f.tol=txtNeto.Text;
+			f.pa=txtPa.Text;
+			f.ca=txtCam.Text;
+			f.ShowDialog();
 			f.Show();
 			this.Hide();
 		}
