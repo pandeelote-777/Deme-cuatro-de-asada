@@ -138,7 +138,7 @@ namespace GermanxChino
 		void TxtDesTextChanged(object sender, EventArgs e)
 		{
 			int d;
-		int des = Convert.ToInt32(txtDes.Text);
+			int des = Convert.ToInt32(txtDes.Text);
 			if(int.TryParse(txtDes.Text, out d))
 			    des = d;
 			else
