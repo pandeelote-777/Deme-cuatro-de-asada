@@ -151,6 +151,7 @@ namespace GermanxChino
 			// 
 			// listView1
 			// 
+			this.listView1.BackColor = System.Drawing.Color.MistyRose;
 			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
 									this.columnHeader1,
 									this.columnHeader2,
@@ -199,7 +200,7 @@ namespace GermanxChino
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+			this.groupBox1.BackColor = System.Drawing.Color.MistyRose;
 			this.groupBox1.Controls.Add(this.txtFecha);
 			this.groupBox1.Controls.Add(this.label9);
 			this.groupBox1.Controls.Add(this.txtp2);
@@ -409,6 +410,7 @@ namespace GermanxChino
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.RosyBrown;
 			this.ClientSize = new System.Drawing.Size(1029, 742);
 			this.Controls.Add(this.label11);
 			this.Controls.Add(this.pictureBox1);

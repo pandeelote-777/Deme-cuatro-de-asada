@@ -162,7 +162,7 @@ namespace GermanxChino
 			pbImagen.Visible=true;
 			lbl1.Text= "Ingresar medida de lado:";
 		    button6.Visible=true;
-		    pbImagen.Image=Imagenes.Cuadrado;
+		    pbImagen.Image=Imagenes.Rectangulo;
 		}
 		
 		void Button6Click(object sender, EventArgs e)
@@ -242,7 +242,7 @@ namespace GermanxChino
 			lbl1.Text= "Ingresar medida de la base:";
 		    lbl2.Text="Ingresar medida de la altura:";
 		    button10.Visible=true;
-		    pbImagen.Image=Imagenes.Rectangulo;
+		    pbImagen.Image=Imagenes.Cuadrado;
 		}
 		
 		void Button10Click(object sender, EventArgs e)

@@ -1,8 +1,8 @@
 ﻿/*
  * Creado por SharpDevelop.
- * Usuario: tijam
- * Fecha: 13/12/2025
- * Hora: 06:02 p. m.
+ * Usuario: a4dew
+ * Fecha: 15/12/2025
+ * Hora: 02:35 a. m.
  * 
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
@@ -13,11 +13,11 @@ using System.Windows.Forms;
 namespace GermanxChino
 {
 	/// <summary>
-	/// Description of Acerca.
+	/// Description of AcercaDe.
 	/// </summary>
-	public partial class Acerca : Form
+	public partial class AcercaDe : Form
 	{
-		public Acerca()
+		public AcercaDe()
 		{
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.
@@ -29,7 +29,7 @@ namespace GermanxChino
 			//
 		}
 		
-		void Button1Click(object sender, EventArgs e)
+		void BtnSalClick(object sender, EventArgs e)
 		{
 			this.Close();
 		}

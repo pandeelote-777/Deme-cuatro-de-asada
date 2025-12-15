@@ -394,7 +394,7 @@ namespace GermanxChino
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.LavenderBlush;
+			this.BackColor = System.Drawing.Color.Pink;
 			this.ClientSize = new System.Drawing.Size(857, 617);
 			this.Controls.Add(this.txtPre);
 			this.Controls.Add(this.cmbDul);
