@@ -277,21 +277,21 @@ namespace GermanxChino
 			btnEliminar.Enabled = dataLista.Rows.Count > 1;
 		}
 		//Conectar la base de datos
-		public bool AgregarEmpleado(int Codigo, string Nombre, string Puesto,string Fecha_de_nacimiento,string Sexo, string Estado){
+		public bool AgregarEmpleado(int Codigo, string Nombre, string Puesto,string fecha_nac,string Sexo, string Estado){
 			//Crear la conexión
 			MySqlConnection cn = new MySqlConnection();
 			cn.ConnectionString="server=localhost; database=Proyecto_final; user=root; pwd=root;";
 			cn.Open();
 			
 			//Se agrega el registro de base de datos
-			string strQl="insert into Empleados(Codigo, Nombre, Puesto, Fecha_de_nacimiento, Sexo, Estado)"+"values(@Codigo, @Nombre, @Puesto, @Fecha_de_nacimiento, @Sexo, @Estado)";
+			string strQl="insert into empleados(Codigo, Nombre, Puesto, fecha_nac, Sexo, Estado)"+"values(@Codigo, @Nombre, @Puesto, @fecha_nac, @Sexo, @Estado)";
 			MySqlCommand comando = new MySqlCommand(strQl, cn);
-			comando.Parameters.AddWithValue("Codigo",Codigo);
-			comando.Parameters.AddWithValue("Nombre",Nombre);
-			comando.Parameters.AddWithValue("Puesto",Puesto);
-			comando.Parameters.AddWithValue("Fecha_de_nacimiento",Fecha_de_nacimiento);
-			comando.Parameters.AddWithValue("Sexo",Sexo);
-			comando.Parameters.AddWithValue("Estado",Estado);
+			comando.Parameters.AddWithValue("@Codigo",Codigo);
+			comando.Parameters.AddWithValue("@Nombre",Nombre);
+			comando.Parameters.AddWithValue("@Puesto",Puesto);
+			comando.Parameters.AddWithValue("@fecha_nac",fecha_nac);
+			comando.Parameters.AddWithValue("@Sexo",Sexo);
+			comando.Parameters.AddWithValue("@Estado",Estado);
 			comando.ExecuteNonQuery();
 			MessageBox.Show("Empleado agregado");
 			
