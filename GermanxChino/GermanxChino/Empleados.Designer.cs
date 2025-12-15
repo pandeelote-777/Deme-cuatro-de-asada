@@ -118,7 +118,7 @@ namespace GermanxChino
 			// 
 			this.txtCodigoEmpleado.Location = new System.Drawing.Point(169, 10);
 			this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
-			this.txtCodigoEmpleado.Size = new System.Drawing.Size(126, 26);
+			this.txtCodigoEmpleado.Size = new System.Drawing.Size(126, 22);
 			this.txtCodigoEmpleado.TabIndex = 6;
 			this.txtCodigoEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
@@ -126,7 +126,7 @@ namespace GermanxChino
 			// 
 			this.txtNombreEmpleado.Location = new System.Drawing.Point(169, 37);
 			this.txtNombreEmpleado.Name = "txtNombreEmpleado";
-			this.txtNombreEmpleado.Size = new System.Drawing.Size(126, 26);
+			this.txtNombreEmpleado.Size = new System.Drawing.Size(126, 22);
 			this.txtNombreEmpleado.TabIndex = 7;
 			this.txtNombreEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
@@ -141,7 +141,7 @@ namespace GermanxChino
 									"Conserge"});
 			this.cboPuesto.Location = new System.Drawing.Point(169, 65);
 			this.cboPuesto.Name = "cboPuesto";
-			this.cboPuesto.Size = new System.Drawing.Size(126, 28);
+			this.cboPuesto.Size = new System.Drawing.Size(126, 24);
 			this.cboPuesto.TabIndex = 8;
 			// 
 			// cboSex
@@ -152,7 +152,7 @@ namespace GermanxChino
 									"Femenino"});
 			this.cboSex.Location = new System.Drawing.Point(169, 121);
 			this.cboSex.Name = "cboSex";
-			this.cboSex.Size = new System.Drawing.Size(126, 28);
+			this.cboSex.Size = new System.Drawing.Size(126, 24);
 			this.cboSex.TabIndex = 10;
 			// 
 			// rdbRegular
@@ -261,7 +261,7 @@ namespace GermanxChino
 			// 
 			this.datiFechaNac.Location = new System.Drawing.Point(169, 94);
 			this.datiFechaNac.Name = "datiFechaNac";
-			this.datiFechaNac.Size = new System.Drawing.Size(293, 26);
+			this.datiFechaNac.Size = new System.Drawing.Size(293, 22);
 			this.datiFechaNac.TabIndex = 21;
 			this.datiFechaNac.Value = new System.DateTime(2025, 12, 12, 0, 0, 0, 0);
 			// 
@@ -291,7 +291,7 @@ namespace GermanxChino
 			// 
 			// Empleados
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.RosyBrown;
 			this.ClientSize = new System.Drawing.Size(732, 409);
