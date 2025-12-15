@@ -60,8 +60,8 @@ namespace GermanxChino
 			this.txtNeto = new System.Windows.Forms.TextBox();
 			this.txtPa = new System.Windows.Forms.TextBox();
 			this.txtCam = new System.Windows.Forms.TextBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
+			this.btnGu = new System.Windows.Forms.Button();
+			this.btnBo = new System.Windows.Forms.Button();
 			this.btnIm = new System.Windows.Forms.Button();
 			this.btnAgre = new System.Windows.Forms.Button();
 			this.btnEli = new System.Windows.Forms.Button();
@@ -263,23 +263,24 @@ namespace GermanxChino
 			this.txtCam.Size = new System.Drawing.Size(100, 26);
 			this.txtCam.TabIndex = 22;
 			// 
-			// button1
+			// btnGu
 			// 
-			this.button1.Location = new System.Drawing.Point(59, 582);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(85, 27);
-			this.button1.TabIndex = 23;
-			this.button1.Text = "Guardar";
-			this.button1.UseVisualStyleBackColor = true;
+			this.btnGu.Location = new System.Drawing.Point(59, 582);
+			this.btnGu.Name = "btnGu";
+			this.btnGu.Size = new System.Drawing.Size(85, 27);
+			this.btnGu.TabIndex = 23;
+			this.btnGu.Text = "Guardar";
+			this.btnGu.UseVisualStyleBackColor = true;
+			this.btnGu.Click += new System.EventHandler(this.BtnGuClick);
 			// 
-			// button2
+			// btnBo
 			// 
-			this.button2.Location = new System.Drawing.Point(169, 582);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 27);
-			this.button2.TabIndex = 24;
-			this.button2.Text = "Borrar";
-			this.button2.UseVisualStyleBackColor = true;
+			this.btnBo.Location = new System.Drawing.Point(169, 582);
+			this.btnBo.Name = "btnBo";
+			this.btnBo.Size = new System.Drawing.Size(75, 27);
+			this.btnBo.TabIndex = 24;
+			this.btnBo.Text = "Borrar";
+			this.btnBo.UseVisualStyleBackColor = true;
 			// 
 			// btnIm
 			// 
@@ -393,6 +394,7 @@ namespace GermanxChino
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.LavenderBlush;
 			this.ClientSize = new System.Drawing.Size(857, 617);
 			this.Controls.Add(this.txtPre);
 			this.Controls.Add(this.cmbDul);
@@ -404,8 +406,8 @@ namespace GermanxChino
 			this.Controls.Add(this.btnEli);
 			this.Controls.Add(this.btnAgre);
 			this.Controls.Add(this.btnIm);
-			this.Controls.Add(this.button2);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.btnBo);
+			this.Controls.Add(this.btnGu);
 			this.Controls.Add(this.txtCam);
 			this.Controls.Add(this.txtPa);
 			this.Controls.Add(this.txtNeto);
@@ -447,8 +449,8 @@ namespace GermanxChino
 		private System.Windows.Forms.Button btnEli;
 		private System.Windows.Forms.Button btnAgre;
 		private System.Windows.Forms.Button btnIm;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button btnBo;
+		private System.Windows.Forms.Button btnGu;
 		private System.Windows.Forms.TextBox txtCam;
 		private System.Windows.Forms.TextBox txtPa;
 		private System.Windows.Forms.TextBox txtNeto;

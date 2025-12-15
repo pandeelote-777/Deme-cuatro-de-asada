@@ -7,7 +7,8 @@
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
 using System;
-using System.Collections.Generic;
+using MySql.Data.MySqlClient;
+using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
@@ -20,6 +21,7 @@ namespace GermanxChino
 	public partial class Postres_Pasteleria_ : Form
 	{
 		double pre, st=0, imn;
+		int idea=1;
 		public Postres_Pasteleria_()
 		{
 			//
@@ -102,6 +104,9 @@ namespace GermanxChino
 			fila.SubItems.Add(pre.ToString("C"));
 			fila.SubItems.Add(can.ToString());
 			fila.SubItems.Add(to.ToString("C"));
+			
+			fila.Tag=idea;
+			idea++;
 			lvReg.Items.Add(fila);
 			BtnEliClick(sender, e);
 			st += to;
@@ -188,9 +193,56 @@ namespace GermanxChino
 			f.tol=txtNeto.Text;
 			f.pa=txtPa.Text;
 			f.ca=txtCam.Text;
-			f.ShowDialog();
 			f.Show();
 			this.Hide();
 		}
+		
+		void BtnGuClick(object sender, EventArgs e)
+		{
+    		if (lvReg.Items.Count == 0)
+    		{
+        		MessageBox.Show("No hay productos para guardar.");
+        		return;
+    		}
+
+    		MySqlConnection coc = new MySqlConnection();
+    		coc.ConnectionString = "server=localhost; database=Proyecto_final; user=root;pwd=root;";
+
+    		try
+    		{
+    		    coc.Open();
+	
+    	    foreach (ListViewItem item in lvReg.Items)
+        		{
+        		    string producto = item.SubItems[0].Text;
+        		    double precio = double.Parse(item.SubItems[2].Text, NumberStyles.Currency, CultureInfo.CurrentCulture);
+        		    int cantidad = Convert.ToInt32(item.SubItems[3].Text);
+        		    double total = double.Parse(item.SubItems[4].Text, NumberStyles.Currency, CultureInfo.CurrentCulture);
+	
+        		    string ql = @"INSERT INTO pasteleria(producto, precio, cantidad, total) 
+                          VALUES (@producto, @precio, @cantidad, @total)";
+
+        		    MySqlCommand cmd = new MySqlCommand(ql, coc);
+        		    cmd.Parameters.AddWithValue("@producto", producto);
+        		    cmd.Parameters.AddWithValue("@precio", precio);
+        		    cmd.Parameters.AddWithValue("@cantidad", cantidad);
+        		    cmd.Parameters.AddWithValue("@total", total);
+        		    
+        		    cmd.ExecuteNonQuery();
+        		}
+
+        		MessageBox.Show("Productos guardados correctamente.");
+    			}
+    			catch (Exception ex)
+    			{
+    			    MessageBox.Show("Error al guardar: " + ex.Message);
+    			}
+    			finally
+    			{
+    			    coc.Close();
+    			}
+			}
+		}
 	}
-}
+
+

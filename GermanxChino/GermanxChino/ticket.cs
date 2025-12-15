@@ -59,5 +59,12 @@ namespace GermanxChino
 			lvPas.MultiSelect=false;
 
 		}
+		
+		void BtnRegreClick(object sender, EventArgs e)
+		{
+			Postres_Pasteleria_ f = new Postres_Pasteleria_();
+			f.Show();
+			this.Close();
+		}
 	}
 }
