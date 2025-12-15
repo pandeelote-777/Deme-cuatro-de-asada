@@ -164,8 +164,10 @@ namespace GermanxChino
 									this.Precio,
 									this.Cantidad,
 									this.Total});
+			this.lvReg.FullRowSelect = true;
 			this.lvReg.GridLines = true;
 			this.lvReg.Location = new System.Drawing.Point(59, 286);
+			this.lvReg.MultiSelect = false;
 			this.lvReg.Name = "lvReg";
 			this.lvReg.Size = new System.Drawing.Size(736, 192);
 			this.lvReg.TabIndex = 14;
@@ -281,6 +283,7 @@ namespace GermanxChino
 			this.btnBo.TabIndex = 24;
 			this.btnBo.Text = "Borrar";
 			this.btnBo.UseVisualStyleBackColor = true;
+			this.btnBo.Click += new System.EventHandler(this.BtnBoClick);
 			// 
 			// btnIm
 			// 

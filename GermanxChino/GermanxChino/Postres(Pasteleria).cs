@@ -108,7 +108,11 @@ namespace GermanxChino
 			fila.Tag=idea;
 			idea++;
 			lvReg.Items.Add(fila);
-			BtnEliClick(sender, e);
+			cmbDul.Text="";
+			cmbSal.Text="";
+			txtCan.Clear();
+			txtTo.Text=(0).ToString("C");
+			txtPre.Text=(0).ToString("C");
 			st += to;
 			txtSub.Text=st.ToString("C");
 			
@@ -134,7 +138,7 @@ namespace GermanxChino
 		void TxtDesTextChanged(object sender, EventArgs e)
 		{
 			int d;
-			int des = Convert.ToInt32(txtDes.Text);
+		int des = Convert.ToInt32(txtDes.Text);
 			if(int.TryParse(txtDes.Text, out d))
 			    des = d;
 			else
@@ -145,11 +149,20 @@ namespace GermanxChino
 		
 		void BtnEliClick(object sender, EventArgs e)
 		{
+			if(lvReg.SelectedItems.Count==0)
+			{
+				MessageBox.Show("Selecciona un producto para eliminar");
+				
+				return;
+			}
+			lvReg.Items.Remove(lvReg.SelectedItems[0]);
 			cmbDul.Text="";
 			cmbSal.Text="";
 			txtCan.Clear();
 			txtTo.Text=(0).ToString("C");
 			txtPre.Text=(0).ToString("C");
+			txtSub.Text=(0).ToString("C");
+			txtTo.Text=(0).ToString("C");
 		}
 		
 		void TxtPaTextChanged(object sender, EventArgs e)
@@ -242,7 +255,12 @@ namespace GermanxChino
     			    coc.Close();
     			}
 			}
+		
+		void BtnBoClick(object sender, EventArgs e)
+		{
+ 
 		}
 	}
+}
 
 
