@@ -59,7 +59,7 @@ namespace GermanxChino
 		
 		void ToolAcerClick(object sender, EventArgs e)
 		{
-			cerAb(new Acerca());
+			cerAb(new AcercaDe());
 		}
 		//Metodo para serrar los formularios cuando se ponga otro y poner el otro
 		void cerAb(Form cer){
