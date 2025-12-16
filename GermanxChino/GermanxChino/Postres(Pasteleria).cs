@@ -258,8 +258,38 @@ namespace GermanxChino
 		
 		void BtnBoClick(object sender, EventArgs e)
 		{
- 
+			eliminarVenta(int.Parse(txtId.Text));
 		}
+		
+		public bool eliminarVenta(int Id){
+			//Se crea la conexión 
+			MySqlConnection cn=new MySqlConnection();
+			cn.ConnectionString="server=localhost; database=Proyecto_final; user=root; pwd=root;";
+			MySqlCommand comando=new MySqlCommand();
+			
+			//Eliminar el registro de el empleado
+			try{
+				cn.ConnectionString="server=localhost; database=Proyecto_final; user=root; pwd=root;";
+				cn.Open();
+				
+				//eliminar con un comando
+				string strSQL="delete from pasteleria where Id = " + Id;
+				comando=new MySqlCommand(strSQL, cn);
+				comando.ExecuteNonQuery();
+			}
+			catch{
+				return false;
+			}
+			finally{
+				//Finalizamos la conexión
+				comando.Dispose();
+				cn.Close();
+				cn.Dispose();
+			}
+			return true;
+		}
+		
+		//Traerme los datos de la base de datos a la tabla
 	}
 }
 

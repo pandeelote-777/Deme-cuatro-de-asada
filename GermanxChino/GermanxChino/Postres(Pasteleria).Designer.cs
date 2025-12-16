@@ -72,6 +72,8 @@ namespace GermanxChino
 			this.cmbSal = new System.Windows.Forms.ComboBox();
 			this.cmbDul = new System.Windows.Forms.ComboBox();
 			this.txtPre = new System.Windows.Forms.TextBox();
+			this.label11 = new System.Windows.Forms.Label();
+			this.txtId = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.SuspendLayout();
@@ -393,12 +395,29 @@ namespace GermanxChino
 			this.txtPre.Size = new System.Drawing.Size(100, 26);
 			this.txtPre.TabIndex = 35;
 			// 
+			// label11
+			// 
+			this.label11.Location = new System.Drawing.Point(155, 627);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(30, 23);
+			this.label11.TabIndex = 36;
+			this.label11.Text = "Id:";
+			// 
+			// txtId
+			// 
+			this.txtId.Location = new System.Drawing.Point(191, 627);
+			this.txtId.Name = "txtId";
+			this.txtId.Size = new System.Drawing.Size(100, 26);
+			this.txtId.TabIndex = 37;
+			// 
 			// Postres_Pasteleria_
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Pink;
-			this.ClientSize = new System.Drawing.Size(857, 617);
+			this.ClientSize = new System.Drawing.Size(857, 690);
+			this.Controls.Add(this.txtId);
+			this.Controls.Add(this.label11);
 			this.Controls.Add(this.txtPre);
 			this.Controls.Add(this.cmbDul);
 			this.Controls.Add(this.cmbSal);
@@ -437,6 +456,8 @@ namespace GermanxChino
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.TextBox txtId;
+		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.ColumnHeader Total;
 		private System.Windows.Forms.ColumnHeader Cantidad;
 		private System.Windows.Forms.ColumnHeader Precio;
