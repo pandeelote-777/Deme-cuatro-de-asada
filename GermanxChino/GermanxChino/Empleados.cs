@@ -281,7 +281,7 @@ namespace GermanxChino
 		public bool AgregarEmpleado(int Codigo, string Nombre, string Puesto,string fecha_nac,string Sexo, string Estado){
 			//Crear la conexión
 			MySqlConnection cn = new MySqlConnection();
-			cn.ConnectionString="server=localhost; database=Proyecto_final; user=root; pwd=root;";
+			cn.ConnectionString="server=localhost; database=Proyecto_final; user=root; pwd=;";
 			cn.Open();
 			
 			//Se agrega el registro de base de datos
@@ -308,12 +308,12 @@ namespace GermanxChino
 		public bool eliminarEmpleado(int Codigo){
 			//Se crea la conexión 
 			MySqlConnection cn=new MySqlConnection();
-			cn.ConnectionString="server=localhost; database=proyecto_final; user=root; pwd=root;";
+			cn.ConnectionString="server=localhost; database=Proyecto_final; user=root; pwd=;";
 			MySqlCommand comando=new MySqlCommand();
 			
 			//Eliminar el registro de el empleado
 			try{
-				cn.ConnectionString="server=localhost; database=proyecto_final; user=root; pwd=root;";
+				cn.ConnectionString="server=localhost; database=Proyecto_final; user=root; pwd=;";
 				cn.Open();
 				
 				//eliminar con un comando
@@ -337,7 +337,7 @@ namespace GermanxChino
 		public bool datosBase(){
 			//Se crea la conexión
 			MySqlConnection cn=new MySqlConnection();
-			cn.ConnectionString="server=localhost; database=proyecto_final; user=root ;pwd=root;";
+			cn.ConnectionString="server=localhost; database=Proyecto_final; user=root ;pwd=;";
 			string strSQL="select * from Empleados";
 			MySqlDataAdapter com=new MySqlDataAdapter(strSQL, cn);
 			DataTable dat=new DataTable();
